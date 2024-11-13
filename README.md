@@ -30,12 +30,12 @@ What is the project about, why did you make it
 
 ## Features
 
-### Feature title - e.g. Navigation
+### Features Included
 
-Screenshot of implemented feature
-Description of the value this feature has for the users
-
-Repeat for each feature
+1. **Pattern Matching Functionality**: The game determines the outcome based on the player's choice and the computer's choice.
+2. **A Limited Number of Tries**: Players can only play up to a maximum number of tries (`maxTries`), which is set to 5.
+3. **A Score Tracking System**: Wins, losses, and ties are tracked and displayed on the screen.
+4. **The Ability to Play Against the Computer**: The player plays against a randomly chosen move made by the computer.
 
 ## Features to be Added
 
@@ -68,9 +68,10 @@ Test the user stories that you created earlier in the readme - did you satisfy t
 
 To write up the tests you can use a table,
 
-| Feature being tested | Expected Outcome | Testing Performed | Actual Outcome | Result (Pass or fail) |
-| -------------------- | ---------------- | ----------------- | -------------- | --------------------- |
-| enter details here | enter details here | enter details here | enter details here | enter details here |
+| Feature being tested | Expected Outcome   | Testing Performed  | Actual Outcome     | Result (Pass or fail) |
+| -------------------- | ------------------ | ------------------ | ------------------ | --------------------- |
+| enter details here   | enter details here | enter details here | enter details here | enter details here    |
+
 You should have tests for every section of every page.. individually.
 
 ## Technologies Used
