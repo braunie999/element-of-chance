@@ -11,6 +11,16 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
+.eoc-background {
+  background-image: url(../images/eoc-background.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  position: relative;
+}
+
 h1 {
   text-transform: capitalize;
   text-align: center;
