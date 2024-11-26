@@ -1,5 +1,6 @@
 "use strict";
 
+//Classic game mode function variables
 function cRock() {
   console.log("you clicked rock");
 }
@@ -10,7 +11,7 @@ function cPaper(event) {
 function cScissors() {
   console.log("you clicked scissors");
 }
-
+//Modern game mode functions variables
 function mRock() {
   console.log("you clicked rock");
 }
@@ -26,7 +27,7 @@ function mLizard(event) {
   console.log(event);
 }
 function mSpock() {
-  console.log("you chose spock");
+  console.log("you choose spock");
 }
 
 let classicGame = `
