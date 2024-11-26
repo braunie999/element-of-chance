@@ -5,13 +5,9 @@ function exampleRock() {
 function examplePaper(event) {
   console.log(event);
 }
-
-const moves = ["rock", "paper", "scissors", "lizard", "spock"];
-let wins = 0;
-let losses = 0;
-let ties = 0;
-const maxTries = 5;
-let tries = 0;
+function exampleScissors() {
+  console.log("you clicked scissors");
+}
 
 let classicGame = `
 <!-- Classic game mode container -->
@@ -91,12 +87,20 @@ function insertClassicGame() {
   classicPaper.addEventListener("click", examplePaper);
   let classicRock = document.getElementById("classic-rock");
   classicRock.addEventListener("click", exampleRock);
+  let classicScissors = document.getElementById("classic-scissors");
+  classicScissors.addEventListener("click", exampleScissors);
   let playClassicBackBtn = document.getElementById("classic-mode-back-to-menu");
-  playClassicBackBtn.addEventListener("click", insertMenu)
+  playClassicBackBtn.addEventListener("click", insertMenu);
 }
 
 function insertPlayModern() {
-  mainContainer.innerHTML = playModernGame;
+  mainContainer.innerHTML = modernGame;
+  let classicPaper = document.getElementById("classic-paper");
+  classicPaper.addEventListener("click", examplePaper);
+  let classicRock = document.getElementById("classic-rock");
+  classicRock.addEventListener("click", exampleRock);
+  let classicScissors = document.getElementById("classic-scissors");
+  classicScissors.addEventListener("click", exampleScissors);
 }
 
 function insertMenu() {
@@ -110,7 +114,9 @@ function insertMenu() {
 
 function insertHowToPlay() {
   mainContainer.innerHTML = gameRules;
-  let instructionsBackBtn = document.getElementById("instructions-back-to-menu");
+  let instructionsBackBtn = document.getElementById(
+    "instructions-back-to-menu"
+  );
   instructionsBackBtn.addEventListener("click", insertMenu);
 }
 
