@@ -91,9 +91,13 @@ function insertClassicGame() {
   classicPaper.addEventListener("click", examplePaper);
   let classicRock = document.getElementById("classic-rock");
   classicRock.addEventListener("click", exampleRock);
+  let playClassicBackBtn = document.getElementById("classic-game-back-to-menu");
+  playClassicBackBtn.addEventListener("click", insertMenu)
 }
 
-function insertPlayModern() {}
+function insertPlayModern() {
+
+}
 
 function insertMenu() {
   mainContainer.innerHTML = ` <div id="menu">
