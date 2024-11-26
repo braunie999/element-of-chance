@@ -31,6 +31,8 @@ let classicGame = `
 
         <div id="results"></div>
         <div id="scoreboard">
+            <div id="player">User<div>
+            <div id="computer">Computer<div> 
             <h4>Wins: 0 | Losses: 0 | Ties: 0</h4>
         </div>
 
