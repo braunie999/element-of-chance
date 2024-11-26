@@ -4,27 +4,25 @@
 function cRock() {
   console.log("you clicked rock");
 }
-
 function cPaper(event) {
   console.log(event);
 }
 function cScissors() {
   console.log("you clicked scissors");
 }
+
 //Modern game mode functions variables
 function mRock() {
   console.log("you clicked rock");
 }
-
 function mPaper(event) {
   console.log(event);
 }
 function mScissors() {
   console.log("you clicked scissors");
 }
-
 function mLizard(event) {
-  console.log(event);
+  console.log("you choose lizard");
 }
 function mSpock() {
   console.log("you choose spock");
@@ -130,6 +128,7 @@ let gameRules = `
     </div>
 `;
 
+// Main-container housing menu options
 let mainContainer = document.getElementById("main-container");
 
 function insertClassicGame() {
@@ -146,12 +145,15 @@ function insertClassicGame() {
 
 function insertModernGame() {
   mainContainer.innerHTML = modernGame;
-  let classicPaper = document.getElementById("classic-paper");
-  classicPaper.addEventListener("click", examplePaper);
-  let classicRock = document.getElementById("classic-rock");
-  classicRock.addEventListener("click", exampleRock);
-  let classicScissors = document.getElementById("classic-scissors");
-  classicScissors.addEventListener("click", exampleScissors);
+  let modernPaper = document.getElementById("modern-paper");
+  modernPaper.addEventListener("click", mPaper);
+  let modernRock = document.getElementById("modern-rock");
+  modernRock.addEventListener("click", mRock);
+  let modernScissors = document.getElementById("modern-scissors");
+  modernScissors.addEventListener("click", mScissors);
+  let modernLizard = document.getElementById("lizard");
+  modernLizard.addEventListener("click",mLizard);
+
 }
 
 function insertMenu() {
