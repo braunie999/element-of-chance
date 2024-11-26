@@ -1,14 +1,32 @@
 "use strict";
 
-function exampleRock() {
+function cRock() {
   console.log("you clicked rock");
 }
 
-function examplePaper(event) {
+function cPaper(event) {
   console.log(event);
 }
-function exampleScissors() {
+function cScissors() {
   console.log("you clicked scissors");
+}
+
+function mRock() {
+  console.log("you clicked rock");
+}
+
+function mPaper(event) {
+  console.log(event);
+}
+function mScissors() {
+  console.log("you clicked scissors");
+}
+
+function mLizard(event) {
+  console.log(event);
+}
+function mSpock() {
+  console.log("you chose spock");
 }
 
 let classicGame = `
@@ -116,11 +134,11 @@ let mainContainer = document.getElementById("main-container");
 function insertClassicGame() {
   mainContainer.innerHTML = classicGame;
   let classicPaper = document.getElementById("classic-paper");
-  classicPaper.addEventListener("click", examplePaper);
+  classicPaper.addEventListener("click", cPaper);
   let classicRock = document.getElementById("classic-rock");
-  classicRock.addEventListener("click", exampleRock);
+  classicRock.addEventListener("click", cRock);
   let classicScissors = document.getElementById("classic-scissors");
-  classicScissors.addEventListener("click", exampleScissors);
+  classicScissors.addEventListener("click", cScissors);
   let playClassicBackBtn = document.getElementById("classic-mode-back-to-menu");
   playClassicBackBtn.addEventListener("click", insertMenu);
 }
