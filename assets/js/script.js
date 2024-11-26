@@ -37,7 +37,7 @@ let classicGame = `
             <span>Losses: 0</span>
             <span>Ties: 0</span>
         </div>
-
+        <button id="classic-game-back-to-menu">Back</button>
     </div>
 `;
 
