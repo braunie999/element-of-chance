@@ -39,6 +39,36 @@ let classicGame = `
     </div>
 `;
 
+let modernGame = `
+<!-- Modern game mode container -->
+     <div class="modern-mode" id="modern-mode">
+
+        <h2>Rock Paper Scissors Lizard Spock</h2>
+
+        <p>
+        <h3>Choose your move:</h3>
+        </p>
+
+        <div class="options" id="options">
+            <button id="modern-rock">✊🏽</button>
+            <button id="modern-paper">🤚🏽</button>
+            <button id="modern-scissors">✌🏽</button>
+            <button id="lizard">Lizard🤏🏽</button>
+            <button id="spock">🖖🏽/button>
+        </div>
+
+        <div id="results"></div>
+        <div id="scoreboard">
+            <div id="player">User<div>
+            <div id="computer">Computer<div>    
+            <span>Wins: 0</span>
+            <span>Losses: 0</span>
+            <span>Ties: 0</span>
+        </div>
+        <button id="modern-mode-back-to-menu">Back</button>
+    </div> -->
+`;
+
 let gameRules = `
 <div class="game-rules" id="game-rules">
         <h3>How to play:</h3>
@@ -95,7 +125,7 @@ function insertClassicGame() {
   playClassicBackBtn.addEventListener("click", insertMenu);
 }
 
-function insertPlayModern() {
+function insertModernGame() {
   mainContainer.innerHTML = modernGame;
   let classicPaper = document.getElementById("classic-paper");
   classicPaper.addEventListener("click", examplePaper);
