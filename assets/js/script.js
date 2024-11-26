@@ -10,6 +10,59 @@ function cPaper(event) {
 function cScissors() {
   console.log("you clicked scissors");
 }
+// shows what the player clicked on
+function classicPlayerChoice(event) {
+  let playerChoice = event.target.id.slice(8);
+  console.log(playerChoice);
+  let computerChoice = classicComputerChoice();
+  console.log(computerChoice);
+  classicWinner(playerChoice, computerChoice);
+}
+
+// Computers choice
+
+function classicComputerChoice() {
+  let options = ["rock", "paper", "scissors"];
+  let randomChoice = Math.floor(Math.random() * options.length);
+  return options[randomChoice];
+}
+
+function classicWinner(playerChoice, computerChoice) {
+  let result = ''
+  if (playerChoice == computerChoice) {
+    console.log("draw");
+    result = "draw";
+    updateScoreboard(playerChoice, computerChoice, result);
+    return;
+  }
+  switch (playerChoice + computerChoice) {
+    case "rockscissors":
+    case "paperrock":
+    case "scissorspaper":
+      console.log("player wins");
+      result = "player"
+      updateScoreboard(playerChoice, computerChoice, result)
+      return;
+  }
+  console.log("computer wins");
+  result = "computer"
+  updateScoreboard(playerChoice, computerChoice, result);
+}
+
+// Funtion updating the scoreboard
+function updateScoreboard(playerChoice, computerChoice, result) {
+  let player = document.getElementById("player");
+  player.innerText =
+    "User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
+  ;
+  let computer = document.getElementById("computer");
+  computer.innerText =
+    "Computer: " +
+      computerChoice.charAt(0).toUpperCase() +
+      computerChoice.slice(1)
+  ;
+}
+
 
 //Modern game mode functions variables
 function mRock() {
@@ -46,8 +99,8 @@ let classicGame = `
 
         <div id="results"></div>
         <div id="scoreboard">
-            <div id="player">User<div>
-            <div id="computer">Computer<div> 
+            <div id="player">User</div>
+            <div id="computer">Computer</div> 
             <span>Wins: 0</span>
             <span>Losses: 0</span>
             <span>Ties: 0</span>
@@ -134,11 +187,11 @@ let mainContainer = document.getElementById("main-container");
 function insertClassicGame() {
   mainContainer.innerHTML = classicGame;
   let classicPaper = document.getElementById("classic-paper");
-  classicPaper.addEventListener("click", cPaper);
+  classicPaper.addEventListener("click", classicPlayerChoice);
   let classicRock = document.getElementById("classic-rock");
-  classicRock.addEventListener("click", cRock);
+  classicRock.addEventListener("click", classicPlayerChoice);
   let classicScissors = document.getElementById("classic-scissors");
-  classicScissors.addEventListener("click", cScissors);
+  classicScissors.addEventListener("click", classicPlayerChoice);
   let playClassicBackBtn = document.getElementById("classic-mode-back-to-menu");
   playClassicBackBtn.addEventListener("click", insertMenu);
 }
@@ -156,7 +209,7 @@ function insertModernGame() {
   let modernSpock = document.getElementById("spock");
   modernSpock.addEventListener("click", mSpock);
   let playModernBackBtn = document.getElementById("modern-mode-back-to-menu");
-  playModernBackBtn.addEventListener("click", insertMenu)
+  playModernBackBtn.addEventListener("click", insertMenu);
 }
 
 // Main container menu buttons
