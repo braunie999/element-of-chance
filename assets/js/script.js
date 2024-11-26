@@ -24,9 +24,9 @@ let classicGame = `
         </p>
         
         <div class="options" id="options">
-            <button id="classic-rock">Rock</button>
-            <button id="classic-paper">Paper</button>
-            <button id="classic-scissors">Scissors</button>
+            <button id="classic-rock">✊🏽</button>
+            <button id="classic-paper">🤚🏽</button>
+            <button id="classic-scissors">✌🏽</button>
         </div>
 
         <div id="results"></div>
