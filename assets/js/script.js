@@ -70,8 +70,8 @@ let modernGame = `
             <button id="modern-rock">✊🏽</button>
             <button id="modern-paper">🤚🏽</button>
             <button id="modern-scissors">✌🏽</button>
-            <button id="lizard">Lizard🤏🏽</button>
-            <button id="spock">🖖🏽/button>
+            <button id="lizard">🤏🏽</button>
+            <button id="spock">🖖🏽</button>
         </div>
 
         <div id="results"></div>
@@ -83,7 +83,7 @@ let modernGame = `
             <span>Ties: 0</span>
         </div>
         <button id="modern-mode-back-to-menu">Back</button>
-    </div> -->
+    </div> 
 `;
 
 let gameRules = `
@@ -152,10 +152,14 @@ function insertModernGame() {
   let modernScissors = document.getElementById("modern-scissors");
   modernScissors.addEventListener("click", mScissors);
   let modernLizard = document.getElementById("lizard");
-  modernLizard.addEventListener("click",mLizard);
-
+  modernLizard.addEventListener("click", mLizard);
+  let modernSpock = document.getElementById("spock");
+  modernSpock.addEventListener("click", mSpock);
+  let playModernBackBtn = document.getElementById("modern-mode-back-to-menu");
+  playModernBackBtn.addEventListener("click", insertMenu)
 }
 
+// Main container menu buttons
 function insertMenu() {
   mainContainer.innerHTML = ` <div id="menu">
             <button id="play-classic">Play Classic</button>
@@ -177,7 +181,7 @@ function getMenuButtons() {
   let playClassic = document.getElementById("play-classic");
   playClassic.addEventListener("click", insertClassicGame);
   let playModern = document.getElementById("play-modern");
-  playModern.addEventListener("click", insertPlayModern);
+  playModern.addEventListener("click", insertModernGame);
   let instructions = document.getElementById("instructions");
   instructions.addEventListener("click", insertHowToPlay);
 }
