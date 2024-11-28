@@ -1,5 +1,17 @@
 "use strict";
 
+document.addEventListener('DOMContentLoaded', () => {  
+  const classicButtons = document.querySelectorAll('.classic-mode .options button');  
+  const modernButtons = document.querySelectorAll('.modern-mode .options button');  
+  const resultsDiv = document.getElementById('results');  
+  const winsElement = document.getElementById('wins');  
+  const lossesElement = document.getElementById('losses');  
+  const drawsElement = document.getElementById('draws');  
+
+  let wins = 0;  
+  let losses = 0;  
+  let draws = 0;  
+
 //Classic game mode function variables
 function cRock() {
   console.log("you clicked rock");
