@@ -57,7 +57,7 @@ function updateScoreboard(playerChoice, computerChoice, result) {
   ;
   let computer = document.getElementById("computer");
   computer.innerText =
-    "Computer: " +
+    "Comp: " +
       computerChoice.charAt(0).toUpperCase() +
       computerChoice.slice(1)
   ;
@@ -100,10 +100,10 @@ let classicGame = `
         <div id="results"></div>
         <div id="scoreboard">
             <div id="player">User</div>
-            <div id="computer">Computer</div> 
-            <span>Wins: 0</span>
-            <span>Losses: 0</span>
-            <span>Ties: 0</span>
+             <div id="computer">Comp</div>    
+            <span>Wins: <span id="wins">0</span></span>
+            <span>Losses: <span id="losses">0</span></span>
+            <span>Draws: <span id="draws">0</span></span>
         </div>
         <button id="classic-mode-back-to-menu">Back</button>
     </div>
@@ -130,10 +130,10 @@ let modernGame = `
         <div id="results"></div>
         <div id="scoreboard">
             <div id="player">User<div>
-            <div id="computer">Computer<div>    
-            <span>Wins: 0</span>
-            <span>Losses: 0</span>
-            <span>Ties: 0</span>
+             <div id="computer">Comp</div>    
+            <span>Wins: <span id="wins">0</span></span>
+            <span>Losses: <span id="losses">0</span></span>
+            <span>Draws: <span id="draws">0</span></span>
         </div>
         <button id="modern-mode-back-to-menu">Back</button>
     </div> 
