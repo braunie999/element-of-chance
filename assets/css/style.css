@@ -53,11 +53,16 @@ header > h1 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
   max-width: 400px;
-  margin-top: 20px;
+  margin: 20px 20px;
 }
 
 .options {
-  margin: 20px 0;
+  display: flex;   
+  margin: 20px 0; 
+  align-items: center;
+  justify-content: space-evenly; 
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 /* Button Styles in Game Modes */
@@ -65,12 +70,20 @@ header > h1 {
   background-color: #2196f3; /* Blue */
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
   padding: 15px 20px;
   font-size: 1.5em;
   margin: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
+}
+
+img {
+  max-width: 235%; /* Scale down image size */  
+  max-height: 230%;
+  
 }
 
 .options button:hover {
@@ -122,11 +135,6 @@ button#instructions-back-to-menu:hover {
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-.options {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
 }
 
 #score {
