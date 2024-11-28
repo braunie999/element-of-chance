@@ -142,3 +142,86 @@ button#instructions-back-to-menu:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+/* For mobile phones (max-width: 480px) */  
+@media (max-width: 480px) {  
+  header h1 {  
+      font-size: 24px;  
+  }  
+
+  button {  
+      padding: 8px 15px;  
+      font-size: 12px;  
+  }  
+
+  #menu {  
+      margin: 10px 0;  
+  }  
+
+  #main-container {  
+      padding: 0 10px;  
+  }  
+
+  #scoreboard div {  
+      font-size: 14px;  
+  }  
+}  
+
+/* For tablets and smaller screens (max-width: 768px) */  
+@media (max-width: 768px) {  
+  button {  
+      padding: 10px 20px;  
+      font-size: 14px;  
+  }  
+
+  #scoreboard {  
+      flex-direction: column;  
+      align-items: center;  
+  }  
+  
+  #scoreboard span {  
+      margin-bottom: 10px;  
+  }  
+}  
+
+/* Media query for devices with a max width of 1200px */  
+@media (max-width: 1200px) {  
+  header {  
+      padding: 15px;  
+  }  
+
+  header h1 {  
+      font-size: 28px; /* Slightly smaller font for the title */  
+  }  
+
+  #menu {  
+      display: flex;  
+      flex-direction: column; /* Stack buttons vertically */  
+      align-items: center; /* Center the buttons */  
+      margin-top: 20px; /* Add some spacing above the menu */  
+  }  
+  
+  button {  
+      width: 80%; /* Make buttons wider for better touch targets */  
+      padding: 12px; /* Adjust padding */  
+      font-size: 16px; /* Maintain a readable font size */  
+      margin-bottom: 10px; /* Add space between buttons */  
+  }  
+
+  #scoreboard {  
+      flex-direction: column; /* Stack scoreboard items vertically for better readability */  
+      align-items: center; /* Center scoreboard items */  
+      margin-top: 20px; /* Add space above scoreboard */  
+  }  
+
+  #scoreboard span {  
+      margin-bottom: 5px; /* Space between scoreboard elements */  
+      font-size: 16px; /* Adjust font size for readability */  
+  }  
+
+  /* Adjust results display */  
+  #results {  
+      margin: 20px 0; /* Add spacing around results */  
+      font-size: 18px; /* Increase font size for readability */  
+      text-align: center; /* Center the results */  
+  }  
+}  
