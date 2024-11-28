@@ -1,14 +1,20 @@
 "use strict";
 
+const Rock = "rock";  
+const paper = "paper";  
+const scissors = "scissors"; 
+const lizard = "lizard";
+const spock = "spock";
+
 //Classic game mode function variables
 function cRock() {
-  console.log("you clicked rock");
+  classicGame(rock);
 }
-function cPaper(event) {
-  console.log(event);
+function cPaper() {
+  classicGame(paper);
 }
 function cScissors() {
-  console.log("you clicked scissors");
+  classicGame(scissors);
 }
 // shows what the player clicked on
 function classicPlayerChoice(event) {
@@ -78,6 +84,13 @@ function updateScoreboard(playerChoice, computerChoice, result) {
     losses.innerText = currentLossesValue + 1;
   }
 }
+
+function updateResults(playerChoice, computerChoice, result) {  
+  resultsDiv.innerText = `You chose ${playerChoice}, Computer chose ${computerChoice}. ${result}`;  
+  winsElement.innerText = wins;  
+  lossesElement.innerText = losses;  
+  drawsElement.innerText = draws;  
+}  
 
 //Modern game mode functions variables
 function mRock() {
