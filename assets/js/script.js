@@ -20,14 +20,14 @@ function cPaper() {
 function cScissors() {
   classicGame(scissors);
 }
-// shows what the player clicked on
+// shows what the player clicked on for Classic Mode
 function classicPlayerChoice(event) {
   let playerChoice = event.currentTarget.id.slice(8);
   let computerChoice = classicComputerChoice();
   classicWinner(playerChoice, computerChoice);
 }
 
-// Computers choice
+// Computers choice for Classic Mode
 
 function classicComputerChoice() {
   let options = ["rock", "paper", "scissors"];
@@ -38,7 +38,6 @@ function classicComputerChoice() {
 function classicWinner(playerChoice, computerChoice) {
   let result = "";
   if (playerChoice == computerChoice) {
-    console.log("draw");
     result = "draw";
     updateScoreboard(playerChoice, computerChoice, result);
     return;
@@ -47,12 +46,10 @@ function classicWinner(playerChoice, computerChoice) {
     case "rockscissors":
     case "paperrock":
     case "scissorspaper":
-      console.log("player wins");
       result = "player";
       updateScoreboard(playerChoice, computerChoice, result);
       return;
   }
-  console.log("computer wins");
   result = "computer";
   updateScoreboard(playerChoice, computerChoice, result);
 }
@@ -61,9 +58,6 @@ function classicWinner(playerChoice, computerChoice) {
 
 function updateScoreboard(playerChoice, computerChoice, result) {
   let player = document.getElementById("player");
-  console.log(player)
-  let test = "User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
-  console.log(test)
   player.innerText ="User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
   let computer = document.getElementById("computer");
   computer.innerText ="Comp: " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
