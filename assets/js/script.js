@@ -6,6 +6,10 @@ const scissors = "scissors";
 const lizard = "lizard";
 const spock = "spock";
 
+let wins = "0"
+let losses = "0"
+let drawss = "0"
+
 //Classic game mode function variables
 function cRock() {
   classicGame(rock);
@@ -56,7 +60,6 @@ function classicWinner(playerChoice, computerChoice) {
 // Function updating the scoreboard
 
 function updateScoreboard(playerChoice, computerChoice, result) {
-  console.log("update scoreboard")
   let player = document.getElementById("player");
   console.log(player)
   let test = "User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
