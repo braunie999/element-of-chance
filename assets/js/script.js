@@ -8,7 +8,7 @@ const spock = "spock";
 
 let wins = "0"
 let losses = "0"
-let drawss = "0"
+let draws = "0"
 
 //Classic game mode function variables
 function cRock() {
