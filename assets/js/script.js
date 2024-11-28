@@ -18,10 +18,8 @@ function cScissors() {
 }
 // shows what the player clicked on
 function classicPlayerChoice(event) {
-  let playerChoice = event.target.id.slice(8);
-  console.log(playerChoice);
+  let playerChoice = event.currentTarget.id.slice(8);
   let computerChoice = classicComputerChoice();
-  console.log(computerChoice);
   classicWinner(playerChoice, computerChoice);
 }
 
@@ -58,40 +56,42 @@ function classicWinner(playerChoice, computerChoice) {
 // Function updating the scoreboard
 
 function updateScoreboard(playerChoice, computerChoice, result) {
+  console.log("update scoreboard")
   let player = document.getElementById("player");
-  player.innerText =
-    "User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
+  console.log(player)
+  let test = "User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
+  console.log(test)
+  player.innerText ="User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
   let computer = document.getElementById("computer");
-  computer.innerText =
-    "Comp: " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
-
-  let wins = document.getElementById("wins");
-  let currentWinsValue = parseInt(wins.innerText);
-  wins.innerText = currentWinsValue + 1;
-
-  let losses = document.getElementById("losses");
-  let currentLossesValue = parseInt(losses.innerText);
-  losses.innerText = currentLossesValue + 1;
-
-  let draws = document.getElementById("draws");
-  let currentDrawsValue = parseInt(draws.innerText);
-  draws.innerText = currentDrawsValue + 1;
+  computer.innerText ="Comp: " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
 
   // Update wins or losses based on the result
-  if (result === "wins") {
+  if (result === "player") {
+    let wins = document.getElementById("wins");
+    let currentWinsValue = parseInt(wins.innerText);
     wins.innerText = currentWinsValue + 1;
-  } else (result === "losses") {
+  } else if (result === "computer") {
+    let losses = document.getElementById("losses");
+    let currentLossesValue = parseInt(losses.innerText);
     losses.innerText = currentLossesValue + 1;
-  } else if(result === "draws"){
+  } else {
+    let draws = document.getElementById("draws");
+    let currentDrawsValue = parseInt(draws.innerText);
     draws.innerText = currentDrawsValue +1;
   }
+  updateResults(playerChoice, computerChoice, result);
 }
 
-function updateResults(playerChoice, computerChoice, result) {  
+function updateResults(playerChoice, computerChoice, result) { 
+  if (result === "player") {
+    result = "You Win"
+  } else if (result === "computer") {
+    result = "You Lose"
+  } else {
+    result = "It's a Draw"
+  }
+  let resultsDiv = document.getElementById("results")
   resultsDiv.innerText = `You chose ${playerChoice}, Computer chose ${computerChoice}. ${result}`;  
-  winsElement.innerText = wins;  
-  lossesElement.innerText = losses;  
-  drawsElement.innerText = draws;  
 }  
 
 //Modern game mode functions variables
