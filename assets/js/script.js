@@ -136,15 +136,15 @@ let classicGame = `
 function insertModernGame() {
   mainContainer.innerHTML = modernGame;
   let modernPaper = document.getElementById("m-paper");
-  modernPaper.addEventListener("click", mPaper);
+  modernPaper.addEventListener("click", modernPlayerChoice);
   let modernRock = document.getElementById("m-rock");
-  modernRock.addEventListener("click", mRock);
+  modernRock.addEventListener("click", modernPlayerChoice);
   let modernScissors = document.getElementById("m-scissors");
-  modernScissors.addEventListener("click", mScissors);
+  modernScissors.addEventListener("click", modernPlayerChoice);
   let modernLizard = document.getElementById("m-lizard");
-  modernLizard.addEventListener("click", mLizard);
+  modernLizard.addEventListener("click", modernPlayerChoice);
   let modernSpock = document.getElementById("m-spock");
-  modernSpock.addEventListener("click", mSpock);
+  modernSpock.addEventListener("click", modernPlayerChoice);
   let playModernBackBtn = document.getElementById("modern-mode-back-to-menu");
   playModernBackBtn.addEventListener("click", insertMenu);
 }
@@ -291,7 +291,7 @@ function mSpock() {
 
 // shows what the player clicked on for Modern Mode
 function modernPlayerChoice(event) {
-  let playerChoice = event.currentTarget.id.slice(1);
+  let playerChoice = event.currentTarget.id.slice(2);
   let computerChoice = modernComputerChoice();
   modernWinner(playerChoice, computerChoice);
 }
@@ -304,7 +304,7 @@ function modernComputerChoice() {
   return options[randomChoice];
 }
 
-// Determines the winner of Classic game mode and Game logic 
+// Determines the winner of Modern game mode and Game logic 
 
 function modernWinner(playerChoice, computerChoice) {
   let result = "";
