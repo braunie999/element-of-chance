@@ -1,17 +1,5 @@
 "use strict";
 
-document.addEventListener('DOMContentLoaded', () => {  
-  const classicButtons = document.querySelectorAll('.classic-mode .options button');  
-  const modernButtons = document.querySelectorAll('.modern-mode .options button');  
-  const resultsDiv = document.getElementById('results');  
-  const winsElement = document.getElementById('wins');  
-  const lossesElement = document.getElementById('losses');  
-  const drawsElement = document.getElementById('draws');  
-
-  let wins = 0;  
-  let losses = 0;  
-  let draws = 0;  
-
 //Classic game mode function variables
 function cRock() {
   console.log("you clicked rock");
@@ -120,13 +108,13 @@ let classicGame = `
         
         <div class="options" id="options">
              <button id="classic-rock">
-                <img src="assets/images/rock-emoji.png" alt="rock-emoji">
+                <img src="assets/images/rock.png" alt="rock-emoji">
             </button>
             <button id="classic-paper">
-                <img src="assets/images/paper-emoji.png" alt="hand-emoji">
+                <img src="assets/images/paper.png" alt="hand-emoji">
             </button>
             <button id="classic-scissors">
-                <img src="assets/images/scissors-emoji.png" alt="peace-sign-emoji">
+                <img src="assets/images/scissors.png" alt="peace-sign-emoji">
             </button>
         </div>
 
@@ -153,20 +141,20 @@ let modernGame = `
         </p>
 
         <div class="options" id="options">
-            <button id="modern-rock">
-                <img src="assets/images/rock-emoji.png" alt="rock-emoji">
+           <button id="modern-rock">
+                <img src="assets/images/rock.png" alt="rock-emoji">
             </button>
             <button id="modern-paper">
-                <img src="assets/images/paper-emoji.png" alt="hand-emoji">
+                <img src="assets/images/paper.png" alt="hand-emoji">
             </button>
             <button id="modern-scissors">
-                <img src="assets/images/scissors-emoji.png" alt="peace-sign-emoji">
+                <img src="assets/images/scissors.png" alt="peace-sign-emoji">
             </button>
             <button id="lizard">
-                <img src="assets/images/lizard-emoji.png" alt="puppet hand-emoji">
+                <img src="assets/images/lizard.png" alt="puppet hand-emoji">
             </button>
             <button id="spock">
-                <img src="assets/images/spock-emoji.png" alt="vulcan salute-emoji">
+                <img src="assets/images/spock-hand.png" alt="vulcan salute-emoji">
             </button>
         </div>
 
