@@ -28,7 +28,7 @@ function classicComputerChoice() {
 }
 
 function classicWinner(playerChoice, computerChoice) {
-  let result = ''
+  let result = "";
   if (playerChoice == computerChoice) {
     console.log("draw");
     result = "draw";
@@ -40,28 +40,45 @@ function classicWinner(playerChoice, computerChoice) {
     case "paperrock":
     case "scissorspaper":
       console.log("player wins");
-      result = "player"
-      updateScoreboard(playerChoice, computerChoice, result)
+      result = "player";
+      updateScoreboard(playerChoice, computerChoice, result);
       return;
   }
   console.log("computer wins");
-  result = "computer"
+  result = "computer";
   updateScoreboard(playerChoice, computerChoice, result);
 }
 
 // Funtion updating the scoreboard
+//
 function updateScoreboard(playerChoice, computerChoice, result) {
   let player = document.getElementById("player");
   player.innerText =
-    "User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)
-  ;
+    "User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
   let computer = document.getElementById("computer");
   computer.innerText =
-    "Comp: " +
-      computerChoice.charAt(0).toUpperCase() +
-      computerChoice.slice(1)
-  ;
-}
+    "Comp: " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
+  
+  let wins = document.getElementById("wins");
+  let currentWinsValue = parseInt(wins.innerText);
+  wins.innerText = currentWinsValue + 1;
+
+  let losses = document.getElementById("losses");
+  let currentLossesValue = parseInt(losses.innerText);
+  losses.innerText = currentLossesValue + 1;
+
+  let draws = document.getElementById("draws");
+  let currentDrawsValue = parseInt(draws.innerText);
+  draws.innerText = currentDrawsValue + 1;
+
+  // Update wins or losses based on the result  
+  if (result === 'win') {  
+    wins.innerText = currentWinsValue + 1;  
+  } else if (result === 'loss') {  
+    losses.innerText = currentLossesValue + 1;  
+  }  
+}  
+
 
 
 //Modern game mode functions variables
