@@ -1,6 +1,7 @@
 "use strict";
 
-const Rock = "rock";  
+// Globally needed variables 
+const rock = "rock";  
 const paper = "paper";  
 const scissors = "scissors"; 
 const lizard = "lizard";
@@ -9,6 +10,187 @@ const spock = "spock";
 let wins = "0"
 let losses = "0"
 let draws = "0"
+
+// Main-container housing menu options
+let mainContainer = document.getElementById("main-container");
+
+// Main container menu buttons
+function insertMenu() {
+  mainContainer.innerHTML = ` <div id="menu">
+            <button id="play-classic">Play Classic</button>
+            <button id="play-modern">Play Modern</button>
+            <button id="instructions">How to Play</button>
+        </div>`;
+  getMenuButtons();
+}
+
+// Event listners for menu buttons
+function getMenuButtons() {
+  let playClassic = document.getElementById("play-classic");
+  playClassic.addEventListener("click", insertClassicGame);
+  let playModern = document.getElementById("play-modern");
+  playModern.addEventListener("click", insertModernGame);
+  let instructions = document.getElementById("instructions");
+  instructions.addEventListener("click", insertHowToPlay);
+}
+
+getMenuButtons();
+
+// Function button and Event listners for How to Play 
+function insertHowToPlay() {
+  mainContainer.innerHTML = gameRules;
+  let instructionsBackBtn = document.getElementById("instructions-back-to-menu");
+  instructionsBackBtn.addEventListener("click", insertMenu);
+}
+
+let gameRules = `
+<div class="game-rules" id="game-rules">
+        <h3>How to play:</h3>
+        <h4>Classic Mode:</h4>
+        <p>The winner is determined based on the following interactions:<br>
+            Rock crushes Scissors (Rock wins)
+            <br>
+            Scissors cuts Paper (Scissors wins)
+            <br>
+            Paper covers Rock (Paper wins)
+            <br>
+            Draw: If both players choose the same gesture, it results in a tie, and the game can be played again.
+        </p>
+        <h4>Modern mode:</h4>
+        <p>This mode is an expansion on the classic game Rock, Paper, Scissors,<br>
+            with the additional hand signs of Lizard (resembling a hand puppet),<br>
+            and Spock (the Vulcan Salute).
+            <br>
+            Scissors cuts Paper
+            <br>
+            Paper covers Rock
+            <br>
+            Rock crushes Lizard
+            <br>
+            Lizard poisons Spock
+            <br>
+            Spock smashes Scissors
+            <br>
+            Scissors decapitates Lizard
+            <br>
+            Lizard eats Paper
+            <br>
+            Paper disproves Spock
+            <br>
+            Spock vaporizes Rock
+            <br>
+            Rock crushes Scissors
+        </p>
+        <button id="instructions-back-to-menu">Back</button>
+    </div>
+`;
+
+
+
+
+// Function button and Event listners for Classic Game 
+function insertClassicGame() {
+  mainContainer.innerHTML = classicGame;
+  let classicPaper = document.getElementById("classic-paper");
+  classicPaper.addEventListener("click", classicPlayerChoice);
+  let classicRock = document.getElementById("classic-rock");
+  classicRock.addEventListener("click", classicPlayerChoice);
+  let classicScissors = document.getElementById("classic-scissors");
+  classicScissors.addEventListener("click", classicPlayerChoice);
+  let playClassicBackBtn = document.getElementById("classic-mode-back-to-menu");
+  playClassicBackBtn.addEventListener("click", insertMenu);
+}
+
+let classicGame = `
+<!-- Classic game mode container -->
+    <div class="classic-mode" id="classic-mode">
+
+        <h2>Rock Paper Scissors</h2>
+
+        <p>
+        <h3>Choose your move:</h3>
+        </p>
+        
+        <div class="options" id="options">
+             <button id="classic-rock">
+                <img src="assets/images/rock.png" alt="rock-emoji">
+            </button>
+            <button id="classic-paper">
+                <img src="assets/images/paper.png" alt="hand-emoji">
+            </button>
+            <button id="classic-scissors">
+                <img src="assets/images/scissors.png" alt="peace-sign-emoji">
+            </button>
+        </div>
+
+        <div id="results"></div>
+        <div id="scoreboard">
+            <div id="player">User</div>
+             <div id="computer">Comp</div>    
+            <span>Wins: <span id="wins">0</span></span>
+            <span>Losses: <span id="losses">0</span></span>
+            <span>Draws: <span id="draws">0</span></span>
+        </div>
+        <button id="classic-mode-back-to-menu">Back</button>
+    </div>
+`;
+
+// Function button and Event listners for Modern Game
+function insertModernGame() {
+  mainContainer.innerHTML = modernGame;
+  let modernPaper = document.getElementById("modern-paper");
+  modernPaper.addEventListener("click", mPaper);
+  let modernRock = document.getElementById("modern-rock");
+  modernRock.addEventListener("click", mRock);
+  let modernScissors = document.getElementById("modern-scissors");
+  modernScissors.addEventListener("click", mScissors);
+  let modernLizard = document.getElementById("lizard");
+  modernLizard.addEventListener("click", mLizard);
+  let modernSpock = document.getElementById("spock");
+  modernSpock.addEventListener("click", mSpock);
+  let playModernBackBtn = document.getElementById("modern-mode-back-to-menu");
+  playModernBackBtn.addEventListener("click", insertMenu);
+}
+
+let modernGame = `
+<!-- Modern game mode container -->
+     <div class="modern-mode" id="modern-mode">
+
+        <h2>Rock Paper Scissors Lizard Spock</h2>
+
+        <p>
+        <h3>Choose your move:</h3>
+        </p>
+
+        <div class="options" id="options">
+           <button id="modern-rock">
+                <img src="assets/images/rock.png" alt="rock-emoji">
+            </button>
+            <button id="modern-paper">
+                <img src="assets/images/paper.png" alt="hand-emoji">
+            </button>
+            <button id="modern-scissors">
+                <img src="assets/images/scissors.png" alt="peace-sign-emoji">
+            </button>
+            <button id="lizard">
+                <img src="assets/images/lizard.png" alt="puppet hand-emoji">
+            </button>
+            <button id="spock">
+                <img src="assets/images/spock-hand.png" alt="vulcan salute-emoji">
+            </button>
+        </div>
+
+        <div id="results"></div>
+        <div id="scoreboard">
+            <div id="player">User<div>
+             <div id="computer">Comp</div>    
+            <span>Wins: <span id="wins">0</span></span>
+            <span>Losses: <span id="losses">0</span></span>
+            <span>Draws: <span id="draws">0</span></span>
+        </div>
+        <button id="modern-mode-back-to-menu">Back</button>
+    </div> 
+`;
 
 //Classic game mode function variables
 function cRock() {
@@ -35,6 +217,7 @@ function classicComputerChoice() {
   return options[randomChoice];
 }
 
+// Determines the winner of Classic game mode
 function classicWinner(playerChoice, computerChoice) {
   let result = "";
   if (playerChoice == computerChoice) {
@@ -54,7 +237,7 @@ function classicWinner(playerChoice, computerChoice) {
   updateScoreboard(playerChoice, computerChoice, result);
 }
 
-// Function updating the scoreboard
+// Function updating the scoreboard in Classic game Mode
 
 function updateScoreboard(playerChoice, computerChoice, result) {
   let player = document.getElementById("player");
@@ -108,178 +291,3 @@ function mSpock() {
   console.log("you choose spock");
 }
 
-let classicGame = `
-<!-- Classic game mode container -->
-    <div class="classic-mode" id="classic-mode">
-
-        <h2>Rock Paper Scissors</h2>
-
-        <p>
-        <h3>Choose your move:</h3>
-        </p>
-        
-        <div class="options" id="options">
-             <button id="classic-rock">
-                <img src="assets/images/rock.png" alt="rock-emoji">
-            </button>
-            <button id="classic-paper">
-                <img src="assets/images/paper.png" alt="hand-emoji">
-            </button>
-            <button id="classic-scissors">
-                <img src="assets/images/scissors.png" alt="peace-sign-emoji">
-            </button>
-        </div>
-
-        <div id="results"></div>
-        <div id="scoreboard">
-            <div id="player">User</div>
-             <div id="computer">Comp</div>    
-            <span>Wins: <span id="wins">0</span></span>
-            <span>Losses: <span id="losses">0</span></span>
-            <span>Draws: <span id="draws">0</span></span>
-        </div>
-        <button id="classic-mode-back-to-menu">Back</button>
-    </div>
-`;
-
-let modernGame = `
-<!-- Modern game mode container -->
-     <div class="modern-mode" id="modern-mode">
-
-        <h2>Rock Paper Scissors Lizard Spock</h2>
-
-        <p>
-        <h3>Choose your move:</h3>
-        </p>
-
-        <div class="options" id="options">
-           <button id="modern-rock">
-                <img src="assets/images/rock.png" alt="rock-emoji">
-            </button>
-            <button id="modern-paper">
-                <img src="assets/images/paper.png" alt="hand-emoji">
-            </button>
-            <button id="modern-scissors">
-                <img src="assets/images/scissors.png" alt="peace-sign-emoji">
-            </button>
-            <button id="lizard">
-                <img src="assets/images/lizard.png" alt="puppet hand-emoji">
-            </button>
-            <button id="spock">
-                <img src="assets/images/spock-hand.png" alt="vulcan salute-emoji">
-            </button>
-        </div>
-
-        <div id="results"></div>
-        <div id="scoreboard">
-            <div id="player">User<div>
-             <div id="computer">Comp</div>    
-            <span>Wins: <span id="wins">0</span></span>
-            <span>Losses: <span id="losses">0</span></span>
-            <span>Draws: <span id="draws">0</span></span>
-        </div>
-        <button id="modern-mode-back-to-menu">Back</button>
-    </div> 
-`;
-
-let gameRules = `
-<div class="game-rules" id="game-rules">
-        <h3>How to play:</h3>
-        <h4>Classic Mode:</h4>
-        <p>The winner is determined based on the following interactions:<br>
-            Rock crushes Scissors (Rock wins)
-            <br>
-            Scissors cuts Paper (Scissors wins)
-            <br>
-            Paper covers Rock (Paper wins)
-            <br>
-            Draw: If both players choose the same gesture, it results in a tie, and the game can be played again.
-        </p>
-        <h4>Modern mode:</h4>
-        <p>This mode is an expansion on the classic game Rock, Paper, Scissors,<br>
-            with the additional hand signs of Lizard (resembling a hand puppet),<br>
-            and Spock (the Vulcan Salute).
-            <br>
-            Scissors cuts Paper
-            <br>
-            Paper covers Rock
-            <br>
-            Rock crushes Lizard
-            <br>
-            Lizard poisons Spock
-            <br>
-            Spock smashes Scissors
-            <br>
-            Scissors decapitates Lizard
-            <br>
-            Lizard eats Paper
-            <br>
-            Paper disproves Spock
-            <br>
-            Spock vaporizes Rock
-            <br>
-            Rock crushes Scissors
-        </p>
-        <button id="instructions-back-to-menu">Back</button>
-    </div>
-`;
-
-// Main-container housing menu options
-let mainContainer = document.getElementById("main-container");
-
-function insertClassicGame() {
-  mainContainer.innerHTML = classicGame;
-  let classicPaper = document.getElementById("classic-paper");
-  classicPaper.addEventListener("click", classicPlayerChoice);
-  let classicRock = document.getElementById("classic-rock");
-  classicRock.addEventListener("click", classicPlayerChoice);
-  let classicScissors = document.getElementById("classic-scissors");
-  classicScissors.addEventListener("click", classicPlayerChoice);
-  let playClassicBackBtn = document.getElementById("classic-mode-back-to-menu");
-  playClassicBackBtn.addEventListener("click", insertMenu);
-}
-
-function insertModernGame() {
-  mainContainer.innerHTML = modernGame;
-  let modernPaper = document.getElementById("modern-paper");
-  modernPaper.addEventListener("click", mPaper);
-  let modernRock = document.getElementById("modern-rock");
-  modernRock.addEventListener("click", mRock);
-  let modernScissors = document.getElementById("modern-scissors");
-  modernScissors.addEventListener("click", mScissors);
-  let modernLizard = document.getElementById("lizard");
-  modernLizard.addEventListener("click", mLizard);
-  let modernSpock = document.getElementById("spock");
-  modernSpock.addEventListener("click", mSpock);
-  let playModernBackBtn = document.getElementById("modern-mode-back-to-menu");
-  playModernBackBtn.addEventListener("click", insertMenu);
-}
-
-// Main container menu buttons
-function insertMenu() {
-  mainContainer.innerHTML = ` <div id="menu">
-            <button id="play-classic">Play Classic</button>
-            <button id="play-modern">Play Modern</button>
-            <button id="instructions">How to Play</button>
-        </div>`;
-  getMenuButtons();
-}
-
-function insertHowToPlay() {
-  mainContainer.innerHTML = gameRules;
-  let instructionsBackBtn = document.getElementById(
-    "instructions-back-to-menu"
-  );
-  instructionsBackBtn.addEventListener("click", insertMenu);
-}
-
-function getMenuButtons() {
-  let playClassic = document.getElementById("play-classic");
-  playClassic.addEventListener("click", insertClassicGame);
-  let playModern = document.getElementById("play-modern");
-  playModern.addEventListener("click", insertModernGame);
-  let instructions = document.getElementById("instructions");
-  instructions.addEventListener("click", insertHowToPlay);
-}
-
-getMenuButtons();
