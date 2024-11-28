@@ -85,9 +85,6 @@ let gameRules = `
     </div>
 `;
 
-
-
-
 // Function button and Event listners for Classic Game 
 function insertClassicGame() {
   mainContainer.innerHTML = classicGame;
@@ -138,15 +135,15 @@ let classicGame = `
 // Function button and Event listners for Modern Game
 function insertModernGame() {
   mainContainer.innerHTML = modernGame;
-  let modernPaper = document.getElementById("modern-paper");
+  let modernPaper = document.getElementById("m-paper");
   modernPaper.addEventListener("click", mPaper);
-  let modernRock = document.getElementById("modern-rock");
+  let modernRock = document.getElementById("m-rock");
   modernRock.addEventListener("click", mRock);
-  let modernScissors = document.getElementById("modern-scissors");
+  let modernScissors = document.getElementById("m-scissors");
   modernScissors.addEventListener("click", mScissors);
-  let modernLizard = document.getElementById("lizard");
+  let modernLizard = document.getElementById("m-lizard");
   modernLizard.addEventListener("click", mLizard);
-  let modernSpock = document.getElementById("spock");
+  let modernSpock = document.getElementById("m-spock");
   modernSpock.addEventListener("click", mSpock);
   let playModernBackBtn = document.getElementById("modern-mode-back-to-menu");
   playModernBackBtn.addEventListener("click", insertMenu);
@@ -163,19 +160,19 @@ let modernGame = `
         </p>
 
         <div class="options" id="options">
-           <button id="modern-rock">
+           <button id="m-rock">
                 <img src="assets/images/rock.png" alt="rock-emoji">
             </button>
-            <button id="modern-paper">
+            <button id="m-paper">
                 <img src="assets/images/paper.png" alt="hand-emoji">
             </button>
-            <button id="modern-scissors">
+            <button id="m-scissors">
                 <img src="assets/images/scissors.png" alt="peace-sign-emoji">
             </button>
-            <button id="lizard">
+            <button id="m-lizard">
                 <img src="assets/images/lizard.png" alt="puppet hand-emoji">
             </button>
-            <button id="spock">
+            <button id="m-spock">
                 <img src="assets/images/spock-hand.png" alt="vulcan salute-emoji">
             </button>
         </div>
@@ -217,7 +214,8 @@ function classicComputerChoice() {
   return options[randomChoice];
 }
 
-// Determines the winner of Classic game mode
+// Determines the winner of Classic game mode and Game logic 
+
 function classicWinner(playerChoice, computerChoice) {
   let result = "";
   if (playerChoice == computerChoice) {
@@ -276,18 +274,60 @@ function updateResults(playerChoice, computerChoice, result) {
 
 //Modern game mode functions variables
 function mRock() {
-  console.log("you clicked rock");
+  modernGame(mRock);
 }
-function mPaper(event) {
-  console.log(event);
+function mPaper() {
+  modernGame(paper);
 }
 function mScissors() {
-  console.log("you clicked scissors");
+  modernGame(scissors);
 }
-function mLizard(event) {
-  console.log("you choose lizard");
+function mLizard() {
+  modernGame(lizard);
 }
 function mSpock() {
-  console.log("you choose spock");
+  modernGame(spock);
 }
 
+// shows what the player clicked on for Modern Mode
+function modernPlayerChoice(event) {
+  let playerChoice = event.currentTarget.id.slice(1);
+  let computerChoice = modernComputerChoice();
+  modernWinner(playerChoice, computerChoice);
+}
+
+// Computers choice for Modern Mode
+
+function modernComputerChoice() {
+  let options = ["rock", "paper", "scissors", "lizard", "spock"];
+  let randomChoice = Math.floor(Math.random() * options.length);
+  return options[randomChoice];
+}
+
+// Determines the winner of Classic game mode and Game logic 
+
+function modernWinner(playerChoice, computerChoice) {
+  let result = "";
+  if (playerChoice == computerChoice) {
+    result = "draw";
+    updateScoreboard(playerChoice, computerChoice, result);
+    return;
+  }
+  switch (playerChoice + computerChoice) {
+    case "rockscissors":
+    case "paperrock":
+    case "scissorspaper":
+    case "rocklizard":
+    case "paperspock":
+    case "scissorslizard":
+    case "lizardspock":
+    case "lizardpaper":
+    case "spockscissors":
+    case "spockrock":
+      result = "player";
+      updateScoreboard(playerChoice, computerChoice, result);
+      return;
+  }
+  result = "computer";
+  updateScoreboard(playerChoice, computerChoice, result);
+}
