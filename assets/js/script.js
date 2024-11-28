@@ -58,7 +58,7 @@ function updateScoreboard(playerChoice, computerChoice, result) {
   let computer = document.getElementById("computer");
   computer.innerText =
     "Comp: " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
-  
+
   let wins = document.getElementById("wins");
   let currentWinsValue = parseInt(wins.innerText);
   wins.innerText = currentWinsValue + 1;
@@ -71,15 +71,13 @@ function updateScoreboard(playerChoice, computerChoice, result) {
   let currentDrawsValue = parseInt(draws.innerText);
   draws.innerText = currentDrawsValue + 1;
 
-  // Update wins or losses based on the result  
-  if (result === 'win') {  
-    wins.innerText = currentWinsValue + 1;  
-  } else if (result === 'loss') {  
-    losses.innerText = currentLossesValue + 1;  
-  }  
-}  
-
-
+  // Update wins or losses based on the result
+  if (result === "win") {
+    wins.innerText = currentWinsValue + 1;
+  } else if (result === "loss") {
+    losses.innerText = currentLossesValue + 1;
+  }
+}
 
 //Modern game mode functions variables
 function mRock() {
@@ -109,9 +107,15 @@ let classicGame = `
         </p>
         
         <div class="options" id="options">
-            <button id="classic-rock">✊🏽</button>
-            <button id="classic-paper">🤚🏽</button>
-            <button id="classic-scissors">✌🏽</button>
+             <button id="classic-rock">
+                <img src="assets/images/rock-emoji.png" alt="rock-emoji">
+            </button>
+            <button id="classic-paper">
+                <img src="assets/images/paper-emoji.png" alt="hand-emoji">
+            </button>
+            <button id="classic-scissors">
+                <img src="assets/images/scissors-emoji.png" alt="peace-sign-emoji">
+            </button>
         </div>
 
         <div id="results"></div>
@@ -137,11 +141,21 @@ let modernGame = `
         </p>
 
         <div class="options" id="options">
-            <button id="modern-rock">✊🏽</button>
-            <button id="modern-paper">🤚🏽</button>
-            <button id="modern-scissors">✌🏽</button>
-            <button id="lizard">🤏🏽</button>
-            <button id="spock">🖖🏽</button>
+            <button id="modern-rock">
+                <img src="assets/images/rock-emoji.png" alt="rock-emoji">
+            </button>
+            <button id="modern-paper">
+                <img src="assets/images/paper-emoji.png" alt="hand-emoji">
+            </button>
+            <button id="modern-scissors">
+                <img src="assets/images/scissors-emoji.png" alt="peace-sign-emoji">
+            </button>
+            <button id="lizard">
+                <img src="assets/images/lizard-emoji.png" alt="puppet hand-emoji">
+            </button>
+            <button id="spock">
+                <img src="assets/images/spock-emoji.png" alt="vulcan salute-emoji">
+            </button>
         </div>
 
         <div id="results"></div>
