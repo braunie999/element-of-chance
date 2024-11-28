@@ -55,8 +55,8 @@ function classicWinner(playerChoice, computerChoice) {
   updateScoreboard(playerChoice, computerChoice, result);
 }
 
-// Funtion updating the scoreboard
-//
+// Function updating the scoreboard
+
 function updateScoreboard(playerChoice, computerChoice, result) {
   let player = document.getElementById("player");
   player.innerText =
@@ -78,10 +78,12 @@ function updateScoreboard(playerChoice, computerChoice, result) {
   draws.innerText = currentDrawsValue + 1;
 
   // Update wins or losses based on the result
-  if (result === "win") {
+  if (result === "wins") {
     wins.innerText = currentWinsValue + 1;
-  } else if (result === "loss") {
+  } else (result === "losses") {
     losses.innerText = currentLossesValue + 1;
+  } else if(result === "draws"){
+    draws.innerText = currentDrawsValue +1;
   }
 }
 
