@@ -1,21 +1,64 @@
-/* Asterisk wildcard selector to override default styles added by the browser */
+/* Font style impoted fro google font.com */
+
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Parkinsans:wght@300..800&display=swap");
+
+/* General Reset and Body Styles */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
-/* General style */
 body {
-  font-family: 'Arial', sans-serif;
+  background-color: #120a41;
+}
+/* Header Styles */
+header {
+  background-color: #d5e5ea;
+  padding: 25px;
 }
 
-h1,h2,h3,h4 {
+header > h1 {
   text-transform: capitalize;
   text-align: center;
-  padding-bottom: 35px;
+  font-family: "Asap", Arial, sans-serif;
 }
+/* Menu Button Styles */
+#menu button {  
+  background-color: #ff9800; 
+  color: white;  
+  border: none;  
+  border-radius: 5px;  
+  padding: 10px 20px;  
+  font-size: 1.2em;  
+  margin: 10px;  
+  cursor: pointer;  
+  transition: background-color 0.3s;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+
+#menu button:hover {  
+  background-color: #70480b; /* Darker Orange */  
+}  
+
+/* Back Button Styles */  
+button#classic-mode-back-to-menu, button#modern-mode-back-to-menu, button#instructions-back-to-menu{  
+  background-color: #f44336; /* Red */  
+  color: white;  
+  border: none;  
+  border-radius: 5px;  
+  padding: 10px 20px;  
+  font-size: 1em;  
+  cursor: pointer;  
+  transition: background-color 0.3s;  
+}  
+
+button#classic-mode-back-to-menu:hover, button#modern-mode-back-to-menu:hover, button#instructions-back-to-menu:hover {  
+  background-color: #d32f2f; /* Darker Red */  
+}  
 
 p {
   padding: 0 15px 15px;
@@ -25,7 +68,7 @@ p {
 .options {
   display: flex;
   align-items: center;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
 }
 
 #score {
