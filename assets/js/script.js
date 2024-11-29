@@ -209,13 +209,13 @@ let modernGame = `
 
 //Classic game mode function variables
 function cRock() {
-  classicGame(rock);
+  classicGame(cRock);
 }
 function cPaper() {
-  classicGame(paper);
+  classicGame(cPaper);
 }
 function cScissors() {
-  classicGame(scissors);
+  classicGame(cScissors);
 }
 // shows what the player clicked on for Classic Mode
 function classicPlayerChoice(event) {
@@ -303,16 +303,16 @@ function mRock() {
   modernGame(mRock);
 }
 function mPaper() {
-  modernGame(paper);
+  modernGame(mPaper);
 }
 function mScissors() {
-  modernGame(scissors);
+  modernGame(mScissorscissors);
 }
 function mLizard() {
-  modernGame(lizard);
+  modernGame(mLizard);
 }
 function mSpock() {
-  modernGame(spock);
+  modernGame(mSpock);
 }
 
 // shows what the player clicked on for Modern Mode
