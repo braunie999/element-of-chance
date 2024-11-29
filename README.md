@@ -45,6 +45,8 @@ Describe some additional features you could potentially add to the project that 
 
 ### Validation of Code
 
+ No errors were found when passing through the validator site [validator results for index.html](https://validator.w3.org/nu/?showsource=yes&useragent=Validator.nu%2FLV+https%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F)
+
 Insert screenshots of HTML, CSS and any other code files being tested in the relevant code validator - CSS validator might not validate newer CSS syntax - be careful to read and fully understand why it is giving you an error.
 
 ### Lighthouse
