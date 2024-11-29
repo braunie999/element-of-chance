@@ -45,7 +45,9 @@ Describe some additional features you could potentially add to the project that 
 
 ### Validation of Code
 
- No errors were found when passing through the validator site [validator results for index.html](https://validator.w3.org/nu/?showsource=yes&useragent=Validator.nu%2FLV+https%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F)
+- No errors were found when passing through the validator site [validator results for index.html](https://validator.w3.org/nu/?showsource=yes&useragent=Validator.nu%2FLV+https%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F)
+
+- No errors were found when passing through the W3C CSS validator [validator results for CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
 Insert screenshots of HTML, CSS and any other code files being tested in the relevant code validator - CSS validator might not validate newer CSS syntax - be careful to read and fully understand why it is giving you an error.
 
@@ -82,7 +84,14 @@ Detail what technologies you used. So what code languages, what frameworks, libr
 
 ## Deployment
 
-Detail how to clone the repository, how to fork the repository - how to run the site locally and how to deploy it.
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+
+  - In the GitHub repository, navigate to the settings tab
+  - Select the pages link from the setting menu on the left hand side
+  - Under the GitHub Pages from the source section drop-down menu, select the master branch
+  - One the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+
+  - The live link can be found here - [Element Of Chance Live Site](https://braunie999.github.io/element-of-chance/)
 
 ## Credits
 
@@ -90,6 +99,4 @@ You need to credit where you got anything for your site from.. where are the ima
 
 ## Acknowledgements
 
-Any special acknowledgements you'd like to leave
-
-Back to top link to return to the top of the readme.
+I would like to graciously and humbly thank my mentor, Matt Bodden, for sharing ideas and tips on how to think like a computer and challenging me to code more logically.
