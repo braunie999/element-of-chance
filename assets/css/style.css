@@ -63,6 +63,7 @@ h3 {
 
 h3 {
   text-transform: capitalize;
+  font-size: xx-large;
 }
 
 .options {
@@ -129,7 +130,7 @@ button#instructions-back-to-menu {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  margin: 0px auto;
+  margin: 10px auto;
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -185,6 +186,29 @@ h4 {
 
   #scoreboard div {
     font-size: 14px;
+  }
+
+  /* Back Button Styles */
+  button#classic-mode-back-to-menu,
+  button#modern-mode-back-to-menu,
+  button#instructions-back-to-menu {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 10px auto;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+  }
+
+  /* Back button hover effect */
+  button#classic-mode-back-to-menu:hover,
+  button#modern-mode-back-to-menu:hover,
+  button#instructions-back-to-menu:hover {
+    background-color: #d32f2f; /* Darker Red */
   }
 }
 
@@ -243,11 +267,17 @@ h4 {
     border: none;
     border-radius: 5px;
     padding: 10px 70px;
-    margin: 0px auto;
+    margin: 15px auto;
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.3s;
     display: block;
+  }
+  /* Back button hover effect */
+  button#classic-mode-back-to-menu:hover,
+  button#modern-mode-back-to-menu:hover,
+  button#instructions-back-to-menu:hover {
+    background-color: #d32f2f; /* Darker Red */
   }
 
   /* Adjust results display */
