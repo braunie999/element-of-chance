@@ -1,10 +1,10 @@
-# Rock, Paper, Scissors, Lizard, Spock
+# Element of Chance
 
 ![image of site](link to image) - use an image from AmIResponsive that shows the site on multiple devices
 
 ## Introduction
 
-What is the project about, why did you make it
+Welcome to Element of Chance, an interactive web application that explores the principles of randomness and probability through engaging simulations. This project is designed for users interested in learning about chance through hands-on experience.
 
 ## Table of Contents
 
