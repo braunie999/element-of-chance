@@ -20,9 +20,16 @@ Welcome to Element of Chance, an interactive web application that explores the p
 
 ### Colour Scheme
 
+- The color scheme is designed to be appealing while ensuring readability and accessibility. It uses a combination of vibrant and calming colors to attract users while maintaining
+  focus on the content.
+
 ### Typography
 
+- The typography focuses on clarity and legibility, utilizing web-safe fonts that are easy to read across devices.
+
 ### Imagery
+
+- Images used within the site are sourced from free-to-use repositories, enhancing user engagement without compromising loading times.
 
 ### Wireframes
 
@@ -39,7 +46,9 @@ Welcome to Element of Chance, an interactive web application that explores the p
 
 ## Features to be Added
 
-Describe some additional features you could potentially add to the project that would increase user value - could be things linked to technologies not yet covered by the course but would be a benefit to the user for example, the ability to save an article, or add an article to the site, leave a review.
+- User Accounts: Allow users to save their progress and favorite simulations.
+- Dynamic Graphs: Integrate real-time data visualization for results from simulations.
+- Feedback System: Enable users to rate simulations and provide suggestions for improvements.
 
 ## Testing
 
