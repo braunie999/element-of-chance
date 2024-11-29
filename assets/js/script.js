@@ -197,7 +197,7 @@ let modernGame = `
 
         <div id="results"></div>
         <div id="scoreboard">
-            <div id="player">User<div>
+            <div id="player">User</div>
              <div id="computer">Comp</div>    
             <span>Wins: <span id="wins">0</span></span>
             <span>Losses: <span id="losses">0</span></span>
