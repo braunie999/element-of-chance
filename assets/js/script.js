@@ -1,15 +1,36 @@
 "use strict";
 
 // Globally needed variables 
-const rock = "rock";  
-const paper = "paper";  
-const scissors = "scissors"; 
-const lizard = "lizard";
-const spock = "spock";
+let optionsClassic = ["rock", "paper", "scissors"];  
+let optionsModern = ["rock", "paper", "scissors", "lizard", "spock"];  
+let gameMode = "";
+let prevPlayerChoice = "";
+let prevComputerChoice = "";
+let prevResult = "";
+let wins = 0;
+let losses = 0;
+let draws = 0;
+let maxTries = 5;  
+let currentTries = 0;
 
-let wins = "0"
-let losses = "0"
-let draws = "0"
+// Functions neede by more than one screen 
+
+function selectGameModePlayClassic(){
+  gameMode = "classicGame";
+  launchClassicGame();
+}
+
+function selectGameModePlayModern(){
+  gameMode = "modernGame";
+  launchModernGame();
+}
+
+function launchGame(){
+  if (gameMode === "classicGame"){
+    launchClassicGame();
+  }else if (gameMode === "modernGame");
+    launchModernGame();
+}
 
 // Main-container housing menu options
 let mainContainer = document.getElementById("main-container");
@@ -209,9 +230,9 @@ function classicPlayerChoice(event) {
 // Computers choice for Classic Mode
 
 function classicComputerChoice() {
-  let options = ["rock", "paper", "scissors"];
-  let randomChoice = Math.floor(Math.random() * options.length);
-  return options[randomChoice];
+  let optionsClassic = ["rock", "paper", "scissors"];
+  let randomChoice = Math.floor(Math.random() * optionsClassic.length);
+  return optionsClassic[randomChoice];
 }
 
 // Determines the winner of Classic game mode and Game logic 
@@ -230,6 +251,14 @@ function classicWinner(playerChoice, computerChoice) {
       result = "player";
       updateScoreboard(playerChoice, computerChoice, result);
       return;
+    
+    case "scissorsrock":
+    case "rockpaper":
+    case "paperscissors":
+      result = "computer";
+      updateScoreboard(playerChoice, computerChoice, result);
+      return;
+    
   }
   result = "computer";
   updateScoreboard(playerChoice, computerChoice, result);
@@ -299,9 +328,9 @@ function modernPlayerChoice(event) {
 // Computers choice for Modern Mode
 
 function modernComputerChoice() {
-  let options = ["rock", "paper", "scissors", "lizard", "spock"];
-  let randomChoice = Math.floor(Math.random() * options.length);
-  return options[randomChoice];
+  let optionsModern = ["rock", "paper", "scissors", "lizard", "spock"];
+  let randomChoice = Math.floor(Math.random() * optionsModern.length);
+  return optionsModern[randomChoice];
 }
 
 // Determines the winner of Modern game mode and Game logic 
@@ -325,6 +354,20 @@ function modernWinner(playerChoice, computerChoice) {
     case "spockscissors":
     case "spockrock":
       result = "player";
+      updateScoreboard(playerChoice, computerChoice, result);
+      return;
+    
+    case 'scissorsrock':
+    case 'rockpaper':
+    case 'rockspock':
+    case 'paperscissors':
+    case 'paperlizard':
+    case 'scissorsspock':
+    case 'lizardrock':
+    case 'lizardscissors':
+    case 'spocklizard':
+    case 'spockpaper':
+      result = "computer";
       updateScoreboard(playerChoice, computerChoice, result);
       return;
   }
