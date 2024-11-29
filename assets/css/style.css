@@ -1,4 +1,4 @@
-/* Font style impoted fro google font.com */
+/* Font style impoted from google font.com */
 
 @import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Parkinsans:wght@300..800&display=swap");
 
@@ -31,7 +31,7 @@ header > h1 {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 1.2em;
+  font-size: 17px;
   margin: 10px;
   cursor: pointer;
   transition: background-color 0.3s;
@@ -56,7 +56,8 @@ header > h1 {
   margin: 45px auto;
 }
 
-h2, h3 {
+h2,
+h3 {
   text-align: center;
 }
 
@@ -65,10 +66,10 @@ h3 {
 }
 
 .options {
-  display: flex;   
-  margin: 20px 0; 
+  display: flex;
+  margin: 20px 0;
   align-items: center;
-  justify-content: space-evenly; 
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -89,9 +90,8 @@ h3 {
 }
 
 img {
-  max-width: 500%; /* Scale down image size */  
+  max-width: 500%; /* Scale down image size */
   max-height: 78%;
-
 }
 
 .options button:hover {
@@ -108,11 +108,16 @@ img {
 #scoreboard {
   font-size: 1.1em;
   margin: 20px 0;
-  
+}
+
+#player,
+#computer {
+  margin: 15px;
 }
 
 #scoreboard span {
-  display: inline; /* Each stat on a new line */
+  display: inline;
+  margin-left: 23px;
 }
 
 /* Back Button Styles */
@@ -158,71 +163,97 @@ h4 {
   padding: 1.1em;
 }
 
-/* For mobile phones (max-width: 390px) */  
-@media (max-width: 480px) {  
-  header h1 {  
-      font-size: 24px;  
-  }  
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 24px;
+  }
 
-  #menu button {  
-      padding: 8px 15px;  
-      font-size: 12px; 
-      width: 100%; 
-  }  
+  #menu button {
+    padding: 8px 15px;
+    font-size: 20px;
+    width: 100%;
+  }
 
-  #menu {  
-      margin: 10px 0;  
-  }  
+  #menu {
+    margin: 10px 0;
+  }
 
-  #main-container {  
-      padding: 0 10px;  
-  }  
+  #main-container {
+    padding: 0 10px;
+  }
 
-  #scoreboard div {  
-      font-size: 14px;  
-  }  
-}  
+  #scoreboard div {
+    font-size: 14px;
+  }
+}
 
+/* Media query for larger devices with a max width of 1200px */
+@media (max-width: 1200px) {
+  header {
+    padding: 15px;
+  }
 
-/* Media query for devices with a max width of 1200px */  
-@media (max-width: 1200px) {  
-  header {  
-      padding: 15px;  
-  }  
+  header h1 {
+    font-size: 30px; /* Slightly smaller font for the title */
+  }
 
-  header h1 {  
-      font-size: 28px; /* Slightly smaller font for the title */  
-  }  
+  #menu {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center; /* Center the buttons */
+    justify-content: center;
+    margin-top: 190px; /* Add some spacing above the menu */
+  }
 
-  #menu {  
-      display: flex;  
-      flex-direction: column; /* Stack buttons vertically */  
-      align-items: center; /* Center the buttons */  
-      margin-top: 20px; /* Add some spacing above the menu */  
-  }  
-  
-  button {  
-      width: 80%; /* Make buttons wider for better touch targets */  
-      padding: 12px; /* Adjust padding */  
-      font-size: 16px; /* Maintain a readable font size */  
-      margin-bottom: 10px; /* Add space between buttons */  
-  }  
+  /* Game Mode Styles */
+  s .classic-mode,
+  .modern-mode {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 75px auto;
+  }
 
-  #scoreboard {  
-      flex-direction: column; /* Stack scoreboard items vertically for better readability */  
-      align-items: center; /* Center scoreboard items */  
-      margin-top: 20px; /* Add space above scoreboard */  
-  }  
+  button {
+    width: 80%; /* Make buttons wider for better touch targets */
+    padding: 12px; /* Adjust padding */
+    font-size: 20px; /* Maintain a readable font size */
+    margin-bottom: 10px; /* Add space between buttons */
+  }
 
-  #scoreboard span {  
-      margin-bottom: 5px; /* Space between scoreboard elements */  
-      font-size: 16px; /* Adjust font size for readability */  
-  }  
+  #scoreboard {
+    flex-direction: column; /* Stack scoreboard items vertically for better readability */
+    align-items: center; /* Center scoreboard items */
+    margin-top: 20px; /* Add space above scoreboard */
+  }
 
-  /* Adjust results display */  
-  #results {  
-      margin: 20px 0; /* Add spacing around results */  
-      font-size: 18px; /* Increase font size for readability */  
-      text-align: center; /* Center the results */  
-  }  
-}  
+  #scoreboard span {
+    margin-bottom: 5px; /* Space between scoreboard elements */
+    font-size: 16px; /* Adjust font size for readability */
+  }
+  /* Back Button Styles */
+  button#classic-mode-back-to-menu,
+  button#modern-mode-back-to-menu,
+  button#instructions-back-to-menu {
+    background-color: #f44336; /* Red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 70px;
+    margin: 0px auto;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+  }
+
+  /* Adjust results display */
+  #results {
+    margin: 20px 0; /* Add spacing around results */
+    font-size: 25px; /* Increase font size for readability */
+    text-align: center; /* Center the results */
+  }
+}
