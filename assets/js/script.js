@@ -4,9 +4,6 @@
 let optionsClassic = ["rock", "paper", "scissors"];  
 let optionsModern = ["rock", "paper", "scissors", "lizard", "spock"];  
 let gameMode = "";
-let prevPlayerChoice = "";
-let prevComputerChoice = "";
-let prevResult = "";
 let wins = 0;
 let losses = 0;
 let draws = 0;
