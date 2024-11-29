@@ -1,32 +1,32 @@
 "use strict";
 
-// Globally needed variables 
-let optionsClassic = ["rock", "paper", "scissors"];  
-let optionsModern = ["rock", "paper", "scissors", "lizard", "spock"];  
+// Globally needed variables
+let optionsClassic = ["rock", "paper", "scissors"];
+let optionsModern = ["rock", "paper", "scissors", "lizard", "spock"];
 let gameMode = "";
 let wins = 0;
 let losses = 0;
 let draws = 0;
-let maxTries = 5;  
+let maxTries = 5;
 let currentTries = 0;
 
-// Functions neede by more than one screen 
+// Functions neede by more than one screen
 
-function selectGameModePlayClassic(){
+function selectGameModePlayClassic() {
   gameMode = "classicGame";
   launchClassicGame();
 }
 
-function selectGameModePlayModern(){
+function selectGameModePlayModern() {
   gameMode = "modernGame";
   launchModernGame();
 }
 
-function launchGame(){
-  if (gameMode === "classicGame"){
+function launchGame() {
+  if (gameMode === "classicGame") {
     launchClassicGame();
-  }else if (gameMode === "modernGame");
-    launchModernGame();
+  } else if (gameMode === "modernGame");
+  launchModernGame();
 }
 
 // Main-container housing menu options
@@ -54,10 +54,12 @@ function getMenuButtons() {
 
 getMenuButtons();
 
-// Function button and Event listners for How to Play 
+// Function button and Event listners for How to Play
 function insertHowToPlay() {
   mainContainer.innerHTML = gameRules;
-  let instructionsBackBtn = document.getElementById("instructions-back-to-menu");
+  let instructionsBackBtn = document.getElementById(
+    "instructions-back-to-menu"
+  );
   instructionsBackBtn.addEventListener("click", insertMenu);
 }
 
@@ -103,7 +105,7 @@ let gameRules = `
     </div>
 `;
 
-// Function button and Event listners for Classic Game 
+// Function button and Event listners for Classic Game
 function insertClassicGame() {
   mainContainer.innerHTML = classicGame;
   let classicPaper = document.getElementById("classic-paper");
@@ -146,6 +148,7 @@ let classicGame = `
             <span>Losses: <span id="losses">0</span></span>
             <span>Draws: <span id="draws">0</span></span>
         </div>
+        <div id="reset-container"></div>
         <button id="classic-mode-back-to-menu">Back</button>
     </div>
 `;
@@ -203,6 +206,7 @@ let modernGame = `
             <span>Losses: <span id="losses">0</span></span>
             <span>Draws: <span id="draws">0</span></span>
         </div>
+        <div id="reset-container"></div>
         <button id="modern-mode-back-to-menu">Back</button>
     </div> 
 `;
@@ -232,7 +236,7 @@ function classicComputerChoice() {
   return optionsClassic[randomChoice];
 }
 
-// Determines the winner of Classic game mode and Game logic 
+// Determines the winner of Classic game mode and Game logic
 
 function classicWinner(playerChoice, computerChoice) {
   let result = "";
@@ -248,26 +252,68 @@ function classicWinner(playerChoice, computerChoice) {
       result = "player";
       updateScoreboard(playerChoice, computerChoice, result);
       return;
-    
+
     case "scissorsrock":
     case "rockpaper":
     case "paperscissors":
       result = "computer";
       updateScoreboard(playerChoice, computerChoice, result);
       return;
-    
   }
   result = "computer";
   updateScoreboard(playerChoice, computerChoice, result);
 }
 
-// Function updating the scoreboard in Classic game Mode
+// Function updating the scoreboard in Classic and Modern game Mode
+function resetGame() {
+  currentTries = 0;
+  wins = 0;
+  losses = 0;
+  draws = 0;
+
+  document.getElementById("wins").innerText = "0";
+  document.getElementById("losses").innerText = "0";
+  document.getElementById("draws").innerText = "0";
+  document.getElementById("player").innerText = "user";
+  document.getElementById("computer").innerText = "comp";
+  document.getElementById("results").innerHTML = "";
+  document.getElementById("reset-container").innerHTML = "";
+
+  let buttons = document.querySelectorAll("#options button");
+  buttons.forEach((button) => {
+    button.disabled = false;
+  });
+}
+
+function displayResetBtn() {
+  console.log("awwe mase kinnes");
+  let resultsDiv = document.getElementById("reset-container");
+  resultsDiv.innerHTML += `<button id="reset-game">Reset Game</button>`;
+  let resetButton = document.getElementById("reset-game");
+  resetButton.addEventListener("click", resetGame);
+}
+
+function disableGameButtons() {
+  let buttons = document.querySelectorAll("#options button");
+  buttons.forEach((button) => {
+    button.disabled = true;
+  });
+}
+
+function checkTries() {
+  if (currentTries >= maxTries) {
+    displayResetBtn();
+    disableGameButtons();
+  }
+}
 
 function updateScoreboard(playerChoice, computerChoice, result) {
   let player = document.getElementById("player");
-  player.innerText ="User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
+  player.innerText =
+    "User: " + playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1);
   let computer = document.getElementById("computer");
-  computer.innerText ="Comp: " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
+  computer.innerText =
+    "Comp: " + computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1);
 
   // Update wins or losses based on the result
   if (result === "player") {
@@ -281,12 +327,17 @@ function updateScoreboard(playerChoice, computerChoice, result) {
   } else {
     let draws = document.getElementById("draws");
     let currentDrawsValue = parseInt(draws.innerText);
-    draws.innerText = currentDrawsValue +1;
+    draws.innerText = currentDrawsValue + 1;
   }
+
+  currentTries++;
+  console.log("test", currentTries);
+  checkTries();
+
   updateResults(playerChoice, computerChoice, result);
 }
 
-function updateResults(playerChoice, computerChoice, result) { 
+function updateResults(playerChoice, computerChoice, result) {
   if (result === "player") {
     result = "You Win";
   } else if (result === "computer") {
@@ -294,9 +345,9 @@ function updateResults(playerChoice, computerChoice, result) {
   } else {
     result = "It's a Draw";
   }
-  let resultsDiv = document.getElementById("results")
-  resultsDiv.innerText = `You chose ${playerChoice}, Computer chose ${computerChoice}. ${result}`;  
-}  
+  let resultsDiv = document.getElementById("results");
+  resultsDiv.innerText = `You chose ${playerChoice}, Computer chose ${computerChoice}. ${result}`;
+}
 
 //Modern game mode functions variables
 function mRock() {
@@ -330,7 +381,7 @@ function modernComputerChoice() {
   return optionsModern[randomChoice];
 }
 
-// Determines the winner of Modern game mode and Game logic 
+// Determines the winner of Modern game mode and Game logic
 
 function modernWinner(playerChoice, computerChoice) {
   let result = "";
@@ -353,21 +404,19 @@ function modernWinner(playerChoice, computerChoice) {
       result = "player";
       updateScoreboard(playerChoice, computerChoice, result);
       return;
-    
-    case 'scissorsrock':
-    case 'rockpaper':
-    case 'rockspock':
-    case 'paperscissors':
-    case 'paperlizard':
-    case 'scissorsspock':
-    case 'lizardrock':
-    case 'lizardscissors':
-    case 'spocklizard':
-    case 'spockpaper':
+
+    case "scissorsrock":
+    case "rockpaper":
+    case "rockspock":
+    case "paperscissors":
+    case "paperlizard":
+    case "scissorsspock":
+    case "lizardrock":
+    case "lizardscissors":
+    case "spocklizard":
+    case "spockpaper":
       result = "computer";
       updateScoreboard(playerChoice, computerChoice, result);
       return;
   }
-  result = "computer";
-  updateScoreboard(playerChoice, computerChoice, result);
 }
