@@ -288,11 +288,11 @@ function updateScoreboard(playerChoice, computerChoice, result) {
 
 function updateResults(playerChoice, computerChoice, result) { 
   if (result === "player") {
-    result = "You Win"
+    result = "You Win";
   } else if (result === "computer") {
-    result = "You Lose"
+    result = "You Lose";
   } else {
-    result = "It's a Draw"
+    result = "It's a Draw";
   }
   let resultsDiv = document.getElementById("results")
   resultsDiv.innerText = `You chose ${playerChoice}, Computer chose ${computerChoice}. ${result}`;  
@@ -306,7 +306,7 @@ function mPaper() {
   modernGame(mPaper);
 }
 function mScissors() {
-  modernGame(mScissorscissors);
+  modernGame(mScissors);
 }
 function mLizard() {
   modernGame(mLizard);
