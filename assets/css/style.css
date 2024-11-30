@@ -120,8 +120,7 @@ img {
 }
 
 .options button:hover {
-  background-color: #1e88e5; /* Darker Blue */
-  scale: 1.1;
+  background-color: #1976c8; /* Darker Blue */
 }
 
 /* Results and Scoreboard Styles */
