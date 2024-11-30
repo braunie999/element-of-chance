@@ -118,10 +118,16 @@ Implementation:
   ![Game Instructions](/assets/images/readme.images/how-to-play.png)
 
 - Game screens
-  There are two versions of the game, each with its own screen, but they share the same layout and format.  
-  ![Play classic screen](/assets/images/readme.images/play-classic.png)![Classic game mode after max tries](/assets/images/readme.images/play-classic-reset.png)
+  There are two versions of the game, each with its own screen, but they share the same layout and format.
 
-![Play modern screen](/assets/images/readme.images/play-modern.png)![Modern game mode after max tries](/assets/images/readme.images/play-modern-reset.png)
+  Classic Game Mode
+  ![Play classic screen](/assets/images/readme.images/play-classic.png)
+
+  This screen appears once the max ries of 5 have been reached simultaneously disabling option buttons. Buttons are once again enabled when reset button is clicked.
+  ![Classic game mode after max tries](/assets/images/readme.images/play-classic-reset.png)
+
+  Modern Game Mode  
+  ![Play modern screen](/assets/images/readme.images/play-modern.png)![Modern game mode after max tries](/assets/images/readme.images/play-modern-reset.png)
 
 ### Features Included
 
