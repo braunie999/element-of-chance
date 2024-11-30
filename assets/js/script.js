@@ -45,7 +45,8 @@ let gameRules = `
 <div class="game-rules" id="game-rules">
         <h3>How to play:</h3>
         <h4>Classic Mode:</h4>
-        <p>The winner is determined based on the following interactions:<br>
+         <div class="rules-parent">
+            <p>The winner is determined based on the following interactions:<br>
             Rock crushes Scissors (Rock wins)
             <br>
             Scissors cuts Paper (Scissors wins)
@@ -53,9 +54,11 @@ let gameRules = `
             Paper covers Rock (Paper wins)
             <br>
             Draw: If both players choose the same gesture, it results in a tie, and the game can be played again.
-        </p>
+            </p>
+         </div>
         <h4>Modern mode:</h4>
-        <p>This mode is an expansion on the classic game Rock, Paper, Scissors,<br>
+         <div class="rules-parent">
+            <p>This mode is an expansion on the classic game Rock, Paper, Scissors,<br>
             with the additional hand signs of Lizard (resembling a hand puppet),<br>
             and Spock (the Vulcan Salute).
             <br>
@@ -78,7 +81,8 @@ let gameRules = `
             Spock vaporizes Rock
             <br>
             Rock crushes Scissors
-        </p>
+            </p>
+          </div>  
         <button id="instructions-back-to-menu">Back</button>
     </div>
 `;
