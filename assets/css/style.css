@@ -184,7 +184,7 @@ h4 {
 }
 
 /* For mobile phones (max-width: 480px) */
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
   header h1 {
     font-size: 24px;
   }
@@ -319,3 +319,4 @@ button#reset-game:hover {
     text-align: center; /* Center the results */
   }
 }
+
