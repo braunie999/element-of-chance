@@ -115,14 +115,13 @@ Implementation:
 ![Main menu](/assets/images/readme.images/main-menu.png)
 
 - The main menu has an instrctions button that informs the user of the rules of both game versions.
-![Game Instructions](/assets/images/readme.images/how-to-play.png)
+  ![Game Instructions](/assets/images/readme.images/how-to-play.png)
 
 - Game screens
-There are two versions of the game, each with its own screen, but they share the same layout and format.  
-![Play classic screen](/assets/images/readme.images/play-classic.png)![Classic game mode after max tries](/assets/images/readme.images/play-classic-reset.png)
+  There are two versions of the game, each with its own screen, but they share the same layout and format.  
+  ![Play classic screen](/assets/images/readme.images/play-classic.png)![Classic game mode after max tries](/assets/images/readme.images/play-classic-reset.png)
 
 ![Play modern screen](/assets/images/readme.images/play-modern.png)![Modern game mode after max tries](/assets/images/readme.images/play-modern-reset.png)
-
 
 ### Features Included
 
@@ -154,21 +153,19 @@ There are two versions of the game, each with its own screen, but they share the
 
 ### Manual Testing
 
-You need to perform, and document everything you did to manually test your site.
-At a minimum - you need to check every link on every page works as intended.
-So that is check every link in the nav bar (do this on every single page because its a link in a different file) and any other links that appear on your site.
-Test the responsiveness of the site - you can do this in the dev tools in responsive mode.
-You should also load the site once deployed on as many devices you have access to. What is different from one device to the next? why is it different?
-
-Test the user stories that you created earlier in the readme - did you satisfy the goal, how?
-
-To write up the tests you can use a table,
-
-| Feature being tested | Expected Outcome   | Testing Performed  | Actual Outcome     | Result (Pass or fail) |
-| -------------------- | ------------------ | ------------------ | ------------------ | --------------------- |
-| enter details here   | enter details here | enter details here | enter details here | enter details here    |
-
-You should have tests for every section of every page.. individually.
+| Feature being tested | Expected Outcome                          | Testing Performed | Actual Outcome                                     | Result (Pass or fail) |
+| -------------------- | ----------------------------------------- | ----------------- | -------------------------------------------------- | --------------------- |
+| Click Play Classic   | Launch classic game screen                | ✅                | Classic mode opened                                | Pass                  |
+| Click Play Modern    | Launch Modern game screen                 | ✅                | Modern mode opened                                 | Pass                  |
+| Click How to Play    | Open how to play menu                     | ✅                | Opens how to play button                           | Pass                  |
+| Click Back button    | Return to main menu                       | ✅                | Returns to main menu                               | Pass                  |
+| Click Rock           | User chooses Rock on screen               | ✅                | The word Rock is displayed                         | Pass                  |
+| Click Paper          | User chooses Paper on screen              | ✅                | The word Paper is displayed                        | Pass                  |
+| Click Scissors       | User chooses Scissors on screen           | ✅                | The word Scissors is displayed                     | Pass                  |
+| Click Lizard         | User chooses Lizard on screen             | ✅                | The word Lizard is displayed                       | Pass                  |
+| Click Spock          | User chooses Spock on screen              | ✅                | The word Spock is displayed                        | Pass                  |
+| Max tries reached    | User can no longer click on moves         | ✅                | Option buttons disabled until reset is clicked     | Pass                  |
+| Click Reset button   | Resets game mode in which user is playing | ✅                | clears scoreboard and enables option buttons again | Pass                  |
 
 ## Deployment
 
