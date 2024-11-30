@@ -10,8 +10,7 @@ let draws = 0;
 let maxTries = 5;
 let currentTries = 0;
 
-// Functions neede by more than one screen
-
+// Functions for game selection needed by more than one screen
 function selectGameModePlayClassic() {
   gameMode = "classicGame";
   launchClassicGame();
@@ -22,17 +21,19 @@ function selectGameModePlayModern() {
   launchModernGame();
 }
 
+// Determine Which game mode is selected
 function launchGame() {
   if (gameMode === "classicGame") {
     launchClassicGame();
-  } else if (gameMode === "modernGame");
+  } else if (gameMode === "modernGame"){
   launchModernGame();
+  }
 }
 
 // Main-container housing menu options
 let mainContainer = document.getElementById("main-container");
 
-// Main container menu buttons
+// Getting Main container menu buttons
 function insertMenu() {
   mainContainer.innerHTML = ` <div id="menu">
             <button id="play-classic">Play Classic</button>
@@ -42,7 +43,7 @@ function insertMenu() {
   getMenuButtons();
 }
 
-// Event listners for menu buttons
+// Event listners for clicking on menu buttons
 function getMenuButtons() {
   let playClassic = document.getElementById("play-classic");
   playClassic.addEventListener("click", insertClassicGame);
@@ -52,17 +53,17 @@ function getMenuButtons() {
   instructions.addEventListener("click", insertHowToPlay);
 }
 
+// Calling the get buttons functions
 getMenuButtons();
 
 // Function button and Event listners for How to Play
 function insertHowToPlay() {
   mainContainer.innerHTML = gameRules;
-  let instructionsBackBtn = document.getElementById(
-    "instructions-back-to-menu"
-  );
+  let instructionsBackBtn = document.getElementById("instructions-back-to-menu");
   instructionsBackBtn.addEventListener("click", insertMenu);
 }
 
+// Inner HTML code for the Rules of the game menu button
 let gameRules = `
 <div class="game-rules" id="game-rules">
         <h3>How to play:</h3>
@@ -105,7 +106,7 @@ let gameRules = `
     </div>
 `;
 
-// Function button and Event listners for Classic Game
+// Function button to start the Classic Game mode and Event listners for Classic Game choices
 function insertClassicGame() {
   mainContainer.innerHTML = classicGame;
   let classicPaper = document.getElementById("classic-paper");
@@ -118,6 +119,7 @@ function insertClassicGame() {
   playClassicBackBtn.addEventListener("click", insertMenu);
 }
 
+// Creates the HTML for Classic game mode
 let classicGame = `
 <!-- Classic game mode container -->
     <div class="classic-mode" id="classic-mode">
@@ -153,7 +155,7 @@ let classicGame = `
     </div>
 `;
 
-// Function button and Event listners for Modern Game
+// Function button to start the Modern Game mode and Event listners for Modern Game choices
 function insertModernGame() {
   mainContainer.innerHTML = modernGame;
   let modernPaper = document.getElementById("m-paper");
@@ -170,6 +172,7 @@ function insertModernGame() {
   playModernBackBtn.addEventListener("click", insertMenu);
 }
 
+// Creates the HTML for Modern game mode
 let modernGame = `
 <!-- Modern game mode container -->
      <div class="modern-mode" id="modern-mode">
@@ -221,7 +224,8 @@ function cPaper() {
 function cScissors() {
   classicGame(cScissors);
 }
-// shows what the player clicked on for Classic Mode
+
+// Shows what the player clicked on for Classic Mode and what the computer choose at random 
 function classicPlayerChoice(event) {
   let playerChoice = event.currentTarget.id.slice(8);
   let computerChoice = classicComputerChoice();
@@ -229,15 +233,13 @@ function classicPlayerChoice(event) {
 }
 
 // Computers choice for Classic Mode
-
 function classicComputerChoice() {
   let optionsClassic = ["rock", "paper", "scissors"];
   let randomChoice = Math.floor(Math.random() * optionsClassic.length);
   return optionsClassic[randomChoice];
 }
 
-// Determines the winner of Classic game mode and Game logic
-
+// Determines the winner of Classic Game mode and Game logic
 function classicWinner(playerChoice, computerChoice) {
   let result = "";
   if (playerChoice == computerChoice) {
@@ -264,7 +266,7 @@ function classicWinner(playerChoice, computerChoice) {
   updateScoreboard(playerChoice, computerChoice, result);
 }
 
-// Function updating the scoreboard in Classic and Modern game Mode
+ // Function to reset the game when the max tries have been reached
 function resetGame() {
   currentTries = 0;
   wins = 0;
@@ -279,19 +281,21 @@ function resetGame() {
   document.getElementById("results").innerHTML = "";
   document.getElementById("reset-container").innerHTML = "";
 
+ // Disabling the option buttons when max tries are reached only enabled again when reset button is clicked
   let buttons = document.querySelectorAll("#options button");
   buttons.forEach((button) => {
     button.disabled = false;
   });
 }
 
+// Function button to display reset button when max tries have been reached
 function displayResetBtn() {
-  console.log("awwe mase kinnes");
   let resultsDiv = document.getElementById("reset-container");
-  resultsDiv.innerHTML += `<button id="reset-game">Reset Game</button>`;
+  resultsDiv.innerHTML += `<button id="reset-game">Reset Game</button>`;//adding button without removing other innerHTML code and functionality
   let resetButton = document.getElementById("reset-game");
   resetButton.addEventListener("click", resetGame);
 }
+
 
 function disableGameButtons() {
   let buttons = document.querySelectorAll("#options button");
@@ -307,6 +311,7 @@ function checkTries() {
   }
 }
 
+// Function updating the scoreboard in Classic and Modern game Mode
 function updateScoreboard(playerChoice, computerChoice, result) {
   let player = document.getElementById("player");
   player.innerText =
@@ -337,6 +342,7 @@ function updateScoreboard(playerChoice, computerChoice, result) {
   updateResults(playerChoice, computerChoice, result);
 }
 
+// Function that updates the results of bot Computer and player
 function updateResults(playerChoice, computerChoice, result) {
   if (result === "player") {
     result = "You Win";
@@ -366,23 +372,21 @@ function mSpock() {
   modernGame(mSpock);
 }
 
-// shows what the player clicked on for Modern Mode
+// Shows what the player clicked on for Modern Mode
 function modernPlayerChoice(event) {
   let playerChoice = event.currentTarget.id.slice(2);
   let computerChoice = modernComputerChoice();
   modernWinner(playerChoice, computerChoice);
 }
 
-// Computers choice for Modern Mode
-
+// Computers choice for Modern Mode generated at random
 function modernComputerChoice() {
   let optionsModern = ["rock", "paper", "scissors", "lizard", "spock"];
   let randomChoice = Math.floor(Math.random() * optionsModern.length);
   return optionsModern[randomChoice];
 }
 
-// Determines the winner of Modern game mode and Game logic
-
+// Determines the winner of Modern Game mode and Game logic
 function modernWinner(playerChoice, computerChoice) {
   let result = "";
   if (playerChoice == computerChoice) {
@@ -390,6 +394,7 @@ function modernWinner(playerChoice, computerChoice) {
     updateScoreboard(playerChoice, computerChoice, result);
     return;
   }
+  // Switch case functions 
   switch (playerChoice + computerChoice) {
     case "rockscissors":
     case "paperrock":
