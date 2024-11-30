@@ -1,6 +1,6 @@
 # Element of Chance
 
-![Responsive Screenshot Mockup](/assets/images/readme.images/iam-responsive.png) 
+![Responsive Screenshot Mockup](/assets/images/readme.images/iam-responsive.png)
 
 ## Introduction
 
@@ -108,8 +108,21 @@ Implementation:
 
 ## Features
 
-- The main menu is the first page users see when they visit the site. It's designed based on various games to quickly show what the site offers without needing much text. With only three clearly labeled choices, it's easy for users to navigate. This aligns with the user story: 'As a user, I want a fun and simple game to play.' The site uses color, layout, and images to clearly convey that it is a game.
 - The site features a central column where JavaScript inserts relevant HTML, while the title bar and background are consistent across all screens.
+
+- The main menu is the first page users see when they visit the site. It's designed based on various games to quickly show what the site offers without needing much text. With only three clearly labeled choices, it's easy for users to navigate. This aligns with the user story: 'As a user, I want a fun and simple game to play.' The site uses color, layout, and images to clearly convey that it is a game.
+
+![Main menu](/assets/images/readme.images/main-menu.png)
+
+- The main menu has an instrctions button that informs the user of the rules of both game versions.
+![Game Instructions](/assets/images/readme.images/how-to-play.png)
+
+- Game screens
+There are two versions of the game, each with its own screen, but they share the same layout and format.  
+![Play classic screen](/assets/images/readme.images/play-classic.png)![Classic game mode after max tries](/assets/images/readme.images/play-classic-reset.png)
+
+![Play modern screen](/assets/images/readme.images/play-modern.png)![Modern game mode after max tries](/assets/images/readme.images/play-modern-reset.png)
+
 
 ### Features Included
 
