@@ -1,33 +1,11 @@
-"use strict";
 // Globally needed variables
 let optionsClassic = ["rock", "paper", "scissors"];
 let optionsModern = ["rock", "paper", "scissors", "lizard", "spock"];
-let gameMode = "";
 let wins = 0;
 let losses = 0;
 let draws = 0;
 let maxTries = 5;
 let currentTries = 0;
-
-// Functions for game selection needed by more than one screen
-function selectGameModePlayClassic() {
-  gameMode = "classicGame";
-  launchClassicGame();
-}
-
-function selectGameModePlayModern() {
-  gameMode = "modernGame";
-  launchModernGame();
-}
-
-// Determine Which game mode is selected
-function launchGame() {
-  if (gameMode === "classicGame") {
-    launchClassicGame();
-  } else if (gameMode === "modernGame"){
-  launchModernGame();
-  }
-}
 
 // Main-container housing menu options
 let mainContainer = document.getElementById("main-container");
