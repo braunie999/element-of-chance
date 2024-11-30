@@ -1,5 +1,4 @@
 "use strict";
-
 // Globally needed variables
 let optionsClassic = ["rock", "paper", "scissors"];
 let optionsModern = ["rock", "paper", "scissors", "lizard", "spock"];
@@ -266,7 +265,7 @@ function classicWinner(playerChoice, computerChoice) {
   updateScoreboard(playerChoice, computerChoice, result);
 }
 
- // Function to reset the game when the max tries have been reached
+// Function to reset the game when the max tries have been reached
 function resetGame() {
   currentTries = 0;
   wins = 0;
@@ -295,7 +294,6 @@ function displayResetBtn() {
   let resetButton = document.getElementById("reset-game");
   resetButton.addEventListener("click", resetGame);
 }
-
 
 function disableGameButtons() {
   let buttons = document.querySelectorAll("#options button");
