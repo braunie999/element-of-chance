@@ -53,8 +53,10 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
 ### Colour Scheme
 
 - The color scheme is designed to be appealing while ensuring readability and accessibility. It uses a combination of vibrant and calming colors to attract users while maintaining
-  focus on the content.
+focus on the content.
 
+- The colour codes were checked using a contrast checker to ensure the required contrast ratio for different elements.
+[Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000000%2C%20Black%0D%0A%232196f3%0D%0A%231976c8%0D%0A%23120a41%0D%0A%2370480b%0D%0A%23ff9800%0D%0A%23d5e5ea%0D%0A%23869cad%0D%0A%23f44336%0D%0A%23d32f2f%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
 ### Typography
 
 - The typography focuses on clarity and legibility, utilizing web-safe fonts that are easy to read across devices.
@@ -68,6 +70,10 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
 ### Figma/Full color mockup if produced
 
 ## Features
+
+- The main menu is the first page users see when they visit the site. It's designed based on various games to quickly show what the site offers without needing much text. With only three clearly labeled choices, it's easy for users to navigate. This aligns with the user story: 'As a user, I want a fun and simple game to play.' The site uses color, layout, and images to clearly convey that it is a game.
+  
+- The site features a central column where JavaScript inserts relevant HTML, while the title bar and background are consistent across all screens.
 
 ### Features Included
 
@@ -88,7 +94,7 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
 
 - No errors were found when passing through the validator site [validator results for index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F)
 
-- No errors were found when passing through the W3C CSS validator [validator results for CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+- No errors were found when passing through the W3C CSS validator [validator results for CSS]()
 - JavaScript
   - No errors were returned when passing through the validator service at JSHint.com. ![View Image of Report](/assets/images/read-me/jshint-report.png)
 
