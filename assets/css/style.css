@@ -23,7 +23,25 @@ header > h1 {
   text-transform: capitalize;
   text-align: center;
   font-family: "Asap", Arial, sans-serif;
+  font-size: 28px;
 }
+
+#main-container {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  width: 50vw; /* Make buttons wider for better touch targets */
+  padding: 12px; /* Adjust padding */
+  font-size: 20px; /* Maintain a readable font size */
+  margin: 10px; /* Add space between buttons */
+}
+
+#menu {
+  margin-top: 85px;
+}
+
 /* Menu Button Styles */
 #menu button {
   background-color: #ff9800;
@@ -39,6 +57,7 @@ header > h1 {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 50vw;
 }
 
 #menu button:hover {
@@ -90,7 +109,8 @@ h3 {
   transition: background-color 0.3s;
 }
 
-.options button:disabled, button[disabled] {
+.options button:disabled,
+button[disabled] {
   background-color: #869cad;
 }
 
@@ -101,6 +121,7 @@ img {
 
 .options button:hover {
   background-color: #1e88e5; /* Darker Blue */
+  scale: 1.1;
 }
 
 /* Results and Scoreboard Styles */
@@ -127,15 +148,17 @@ img {
   margin-left: 14px;
 }
 
-button#reset-game{
-    width: 50%;
-    padding-left: 12px;
-    font-size: 20px;
-    margin-left: 60px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
+button#reset-game {
+  width: 50%;
+  padding-left: 12px;
+  font-size: 20px;
+  margin: 10px auto;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  display: block;
+  font-size: 1em;
 }
 
 /* Back Button Styles */
@@ -152,7 +175,7 @@ button#instructions-back-to-menu {
   cursor: pointer;
   transition: background-color 0.3s;
   width: 50%;
-  display: inline-block;
+  display: block;
 }
 
 /* Back and reset button hover effect */
@@ -174,6 +197,10 @@ button#reset-game:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
+.rules-parent {
+  text-align: left;
+}
+
 p {
   line-height: 1.2;
 }
@@ -183,65 +210,6 @@ h4 {
   padding: 1.1em;
 }
 
-/* For mobile phones (max-width: 480px) */
-/*@media (max-width: 480px) {
-  header h1 {
-    font-size: 24px;
-  }
-
-  #menu button {
-    padding: 8px 15px;
-    font-size: 20px;
-    width: 100%;
-  }
-
-  #menu {
-    margin: 10px 0;
-  }
-
-  #main-container {
-    padding: 0 10px;
-  }
-
-  #scoreboard div {
-    font-size: 14px;
-  }
-
-  button#reset-game{
-    width: 50%;
-    padding: 12px;
-    font-size: 20px;
-    margin-left: 28px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-/* Back Button Styles */
-button#classic-mode-back-to-menu,
-button#modern-mode-back-to-menu,
-button#instructions-back-to-menu {
-  background-color: #f44336; /* Red */
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin: 10px auto;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  width: 50%;
-}
-
-/* Back and reset button hover effect */
-button#classic-mode-back-to-menu:hover,
-button#modern-mode-back-to-menu:hover,
-button#instructions-back-to-menu:hover,
-button#reset-game:hover {
-  background-color: #d32f2f; /* Darker Red */
-}
-
 /* Media query for larger devices and Laptops with a max width of 1200px */
 @media (max-width: 1200px) {
   header {
@@ -249,7 +217,7 @@ button#reset-game:hover {
   }
 
   header h1 {
-    font-size: 30px; /* Slightly smaller font for the title */
+    font-size: 28px; /* Slightly smaller font for the title */
   }
 
   #menu {
@@ -257,11 +225,11 @@ button#reset-game:hover {
     flex-direction: column; /* Stack buttons vertically */
     align-items: center; /* Center the buttons */
     justify-content: center;
-    margin-top: 190px; /* Add some spacing above the menu */
+    margin-top: 85px; /* Add some spacing above the menu */
   }
 
   /* Game Mode Styles */
-  s .classic-mode,
+  .classic-mode,
   .modern-mode {
     background-color: white;
     border-radius: 10px;
@@ -272,7 +240,7 @@ button#reset-game:hover {
   }
 
   button {
-    width: 80%; /* Make buttons wider for better touch targets */
+    width: 50vw; /* Make buttons wider for better touch targets */
     padding: 12px; /* Adjust padding */
     font-size: 20px; /* Maintain a readable font size */
     margin-bottom: 10px; /* Add space between buttons */
@@ -318,3 +286,62 @@ button#reset-game:hover {
   }
 }
 
+/* For mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 28px;
+  }
+
+  #menu button {
+    padding: 8px 15px;
+    font-size: 20px;
+    width: 100%;
+  }
+
+  #menu {
+    margin-top: 10vh;
+  }
+
+  #main-container {
+    padding: 0 10px;
+  }
+
+  #scoreboard div {
+    font-size: 14px;
+  }
+
+  button#reset-game {
+    width: 50%;
+    padding: 12px;
+    font-size: 20px;
+    margin-left: 28px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+/* Back Button Styles */
+button#classic-mode-back-to-menu,
+button#modern-mode-back-to-menu,
+button#instructions-back-to-menu {
+  background-color: #f44336; /* Red */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 50%;
+}
+
+/* Back and reset button hover effect */
+button#classic-mode-back-to-menu:hover,
+button#modern-mode-back-to-menu:hover,
+button#instructions-back-to-menu:hover,
+button#reset-game:hover {
+  background-color: #d32f2f; /* Darker Red */
+}
