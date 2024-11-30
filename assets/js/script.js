@@ -312,7 +312,6 @@ function updateScoreboard(playerChoice, computerChoice, result) {
   }
 
   currentTries++;
-  console.log("test", currentTries);
   checkTries();
 
   updateResults(playerChoice, computerChoice, result);
