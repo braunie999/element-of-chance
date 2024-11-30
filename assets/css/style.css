@@ -118,11 +118,24 @@ img {
 #player,
 #computer {
   margin: 15px;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 #scoreboard span {
   display: inline;
-  margin-left: 23px;
+  margin-left: 14px;
+}
+
+button#reset-game{
+    width: 50%;
+    padding-left: 12px;
+    font-size: 20px;
+    margin-left: 60px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
 /* Back Button Styles */
@@ -138,13 +151,15 @@ button#instructions-back-to-menu {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s;
-  display: block;
+  width: 50%;
+  display: inline-block;
 }
 
-/* Back button hover effect */
+/* Back and reset button hover effect */
 button#classic-mode-back-to-menu:hover,
 button#modern-mode-back-to-menu:hover,
-button#instructions-back-to-menu:hover {
+button#instructions-back-to-menu:hover,
+button#reset-game:hover {
   background-color: #d32f2f; /* Darker Red */
 }
 
@@ -192,28 +207,41 @@ h4 {
     font-size: 14px;
   }
 
-  /* Back Button Styles */
-  button#classic-mode-back-to-menu,
-  button#modern-mode-back-to-menu,
-  button#instructions-back-to-menu {
-    background-color: #f44336; /* Red */
+  button#reset-game{
+    width: 50%;
+    padding: 12px;
+    font-size: 20px;
+    margin-left: 28px;
+    background-color: #f44336;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
-    margin: 10px auto;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    display: block;
-  }
+}
 
-  /* Back button hover effect */
-  button#classic-mode-back-to-menu:hover,
-  button#modern-mode-back-to-menu:hover,
-  button#instructions-back-to-menu:hover {
-    background-color: #d32f2f; /* Darker Red */
-  }
+/* Back Button Styles */
+button#classic-mode-back-to-menu,
+button#modern-mode-back-to-menu,
+button#instructions-back-to-menu {
+  background-color: #f44336; /* Red */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px auto;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 50%;
+}
+
+/* Back and reset button hover effect */
+button#classic-mode-back-to-menu:hover,
+button#modern-mode-back-to-menu:hover,
+button#instructions-back-to-menu:hover,
+button#reset-game:hover {
+  background-color: #d32f2f; /* Darker Red */
+}
+
 }
 
 /* Media query for larger devices and Laptops with a max width of 1200px */
