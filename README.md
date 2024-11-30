@@ -12,6 +12,7 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [User Experience](#user-experience)
+    - [Site goal](#site-goal)
     - [User Stories](#user-stories)
   - [Design](#design)
     - [Colour Scheme](#colour-scheme)
@@ -34,11 +35,18 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
 
 ## User Experience
 
+### Site goal
+
+- To offer users an enjoyable and easy-to-play game.
+- To ensure intuitive site navigation, eliminating confusion.
+- To offer multiple gameplay methods.
+- To ensure full accessibility on desktop and touch devices.
+
 ### User Stories
 
-- User Goals - The site’s users want to play an online game that has elements of chance.
-
-- Site Owner Goals - The site’s goal is to provide a challenging game with increasing levels of difficulty to entertain online users.
+- I want a fun and simple game to play.
+- I want a more challenging version of the game.
+- I want an easier and quicker version of the game.
 
 ## Design
 
