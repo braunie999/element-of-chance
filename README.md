@@ -12,14 +12,16 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
   - [Introduction](#introduction)
   - [Table of Contents](#table-of-contents)
   - [User Experience](#user-experience)
-    - [Site goal](#site-goal)
-    - [User Stories](#user-stories)
-  - [Design](#design)
-    - [Colour Scheme](#colour-scheme)
+    - [The Strategy plan](#the-strategy-plan)
+      - [Site goal](#site-goal)
+      - [User Stories](#user-stories)
+    - [The scope plane](#the-scope-plane)
+    - [The structure Plane](#the-structure-plane)
+    - [The Surface Plane](#the-surface-plane)
+      - [Design](#design)
+      - [Colour Scheme](#colour-scheme)
     - [Typography](#typography)
     - [Imagery](#imagery)
-    - [Wireframes](#wireframes)
-    - [Figma/Full color mockup if produced](#figmafull-color-mockup-if-produced)
   - [Features](#features)
     - [Features Included](#features-included)
   - [Features to be Added](#features-to-be-added)
@@ -35,28 +37,67 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
 
 ## User Experience
 
-### Site goal
+### The Strategy plan
+
+- Element of chance aims to provide a fun, engaging experience for individual users during short gameplay sessions,
+
+#### Site goal
 
 - To offer users an enjoyable and easy-to-play game.
 - To ensure intuitive site navigation, eliminating confusion.
 - To offer multiple gameplay methods.
 - To ensure full accessibility on desktop and touch devices.
 
-### User Stories
+#### User Stories
 
 - I want a fun and simple game to play.
-- I want a more challenging version of the game.
 - I want an easier and quicker version of the game.
 
-## Design
+### The scope plane
 
-### Colour Scheme
+- The site must be responsive across all devices—Desktop, Laptop, Tablet, and Mobile.
+- All navigation elements should be easily accessible within the game screen.
+- The design should be visually engaging and clearly convey that it is a game.
+- Two Game modes should be provided.
+
+### The structure Plane
+
+User stories:
+
+> I want a fun and simple game to play.
+
+Acceptance Criteria:
+
+- It should be clear that it is a game, what it is about and how to play.
+
+Implementation:
+
+- The layout, colour scheme font choice and graphic choices will all convey a sense of fun and make it clear to the user that this is a game site. There will be a direct link to the rules of the game on the homepage so the user can easily learn how to play and access information about the game.
+
+> I want an easier and quicker version of the game.
+
+Acceptance Criteria:
+
+- Users should have the option to play a simpler version of the game.
+  
+Implementation:
+
+- Users can choose between the classic game version and a more challenging version that includes lizard and spock options.
+
+### The Surface Plane
+
+#### Design
+
+- I went with a very minimilistic color and design that it was easy on users to follow and stay engaged.
+
+#### Colour Scheme
 
 - The color scheme is designed to be appealing while ensuring readability and accessibility. It uses a combination of vibrant and calming colors to attract users while maintaining
-focus on the content.
+  focus on the content.
 
 - The colour codes were checked using a contrast checker to ensure the required contrast ratio for different elements.
-[Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000000%2C%20Black%0D%0A%232196f3%0D%0A%231976c8%0D%0A%23120a41%0D%0A%2370480b%0D%0A%23ff9800%0D%0A%23d5e5ea%0D%0A%23869cad%0D%0A%23f44336%0D%0A%23d32f2f%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
+  [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000000%2C%20Black%0D%0A%232196f3%0D%0A%231976c8%0D%0A%23120a41%0D%0A%2370480b%0D%0A%23ff9800%0D%0A%23d5e5ea%0D%0A%23869cad%0D%0A%23f44336%0D%0A%23d32f2f%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
+
 ### Typography
 
 - The typography focuses on clarity and legibility, utilizing web-safe fonts that are easy to read across devices.
@@ -65,14 +106,9 @@ focus on the content.
 
 - Images used within the site are sourced from free-to-use repositories, enhancing user engagement without compromising loading times.
 
-### Wireframes
-
-### Figma/Full color mockup if produced
-
 ## Features
 
 - The main menu is the first page users see when they visit the site. It's designed based on various games to quickly show what the site offers without needing much text. With only three clearly labeled choices, it's easy for users to navigate. This aligns with the user story: 'As a user, I want a fun and simple game to play.' The site uses color, layout, and images to clearly convey that it is a game.
-  
 - The site features a central column where JavaScript inserts relevant HTML, while the title bar and background are consistent across all screens.
 
 ### Features Included
@@ -94,7 +130,7 @@ focus on the content.
 
 - No errors were found when passing through the validator site [validator results for index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F)
 
-- No errors were found when passing through the W3C CSS validator [validator results for CSS]()
+- No errors were found when passing through the W3C CSS validator [validator results for CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - JavaScript
   - No errors were returned when passing through the validator service at JSHint.com. ![View Image of Report](/assets/images/read-me/jshint-report.png)
 
@@ -102,7 +138,8 @@ Insert screenshots of HTML, CSS and any other code files being tested in the rel
 
 ### Wave Webaim - accessibility testing
 
-You can test your site for accessibility through the wave.webaim site - it needs to be deployed in order for it to test it. Fix any errors that it gives
+- WAVE Web Accessibility
+  - No errors were returned in the WAVE web accessibility, other than contrast conflict which can be seen in the report. [View Report](https://wave.webaim.org/report#/https://braunie999.github.io/element-of-chance/)
 
 ### Manual Testing
 
