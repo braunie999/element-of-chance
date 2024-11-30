@@ -4,9 +4,33 @@
 
 ## Introduction
 
-Welcome to Element of Chance, an interactive web application that explores the principles of randomness and probability through engaging simulations. This project is designed for users interested in learning about chance through hands-on experience.
+Welcome to Element of Chance, an interactive web application built with HTML, CSS and JavaScript, that explores the principles of randomness and probability through engaging simulations. This project is designed for users interested in learning about chance through hands-on experience.
 
 ## Table of Contents
+
+- [Element of Chance](#element-of-chance)
+  - [Introduction](#introduction)
+  - [Table of Contents](#table-of-contents)
+  - [User Experience](#user-experience)
+    - [User Stories](#user-stories)
+  - [Design](#design)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+    - [Wireframes](#wireframes)
+    - [Figma/Full color mockup if produced](#figmafull-color-mockup-if-produced)
+  - [Features](#features)
+    - [Features Included](#features-included)
+  - [Features to be Added](#features-to-be-added)
+  - [Testing](#testing)
+    - [Validation of Code](#validation-of-code)
+    - [Wave Webaim - accessibility testing](#wave-webaim---accessibility-testing)
+    - [Manual Testing](#manual-testing)
+  - [Deployment](#deployment)
+  - [Credits](#credits)
+    - [Media](#media)
+    - [Reference Material](#reference-material)
+  - [Acknowledgements](#acknowledgements)
 
 ## User Experience
 
@@ -60,11 +84,6 @@ Welcome to Element of Chance, an interactive web application that explores the p
 
 Insert screenshots of HTML, CSS and any other code files being tested in the relevant code validator - CSS validator might not validate newer CSS syntax - be careful to read and fully understand why it is giving you an error.
 
-### Lighthouse
-
-You can perform a test of your website for performance, accessibility, best practices and SEO through the google chrome lighthouse test - it is in your Dev tools. Bear in mind that your internet connection speed plays a part in the performance figures obtained. Where it scores low, it will give you suggestions on how to improve the site - read the suggestions and think about how to implement them - it could be a good idea.
-Do this for both Desktop and Mobile.
-
 ### Wave Webaim - accessibility testing
 
 You can test your site for accessibility through the wave.webaim site - it needs to be deployed in order for it to test it. Fix any errors that it gives
@@ -87,10 +106,6 @@ To write up the tests you can use a table,
 
 You should have tests for every section of every page.. individually.
 
-## Technologies Used
-
-Detail what technologies you used. So what code languages, what frameworks, libraries, what software did you use to develop the site - Balsamic for your wireframes, Figma for a mockup?
-
 ## Deployment
 
 - The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -104,7 +119,16 @@ Detail what technologies you used. So what code languages, what frameworks, libr
 
 ## Credits
 
-You need to credit where you got anything for your site from.. where are the images from, are they all from the same site? where did you get the content from, if you wrote it yourself, did you fact check anywhere? did you get code from anywhere? if so, it needs to be clearly marked in both the code and the readme.
+### Media
+
+- The favicon was created by using [favicon-generator.org](https://www.favicon-generator.org/).
+- The emoji images was downloaded from the website[https://emoji.aranja.com/]
+
+### Reference Material
+
+- W3 Schools was used as a reference point for HTML, CSS and JavaScript
+- MDN Web Docs was also used as a reference point for HTML, CSS and JavaScript
+- StackOverflow was also used as a reference point for JavaScrpt
 
 ## Acknowledgements
 
