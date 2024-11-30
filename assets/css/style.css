@@ -147,10 +147,10 @@ img {
   margin-left: 14px;
 }
 
+
 button#reset-game {
   width: 50%;
   padding-left: 12px;
-  font-size: 20px;
   margin: 10px auto;
   background-color: #f44336;
   color: white;
@@ -158,6 +158,7 @@ button#reset-game {
   border-radius: 5px;
   display: block;
   font-size: 1em;
+
 }
 
 /* Back Button Styles */
@@ -310,14 +311,15 @@ h4 {
   }
 
   button#reset-game {
-    width: 50%;
+    width: 50vw;
     padding: 12px;
-    font-size: 20px;
-    margin-left: 28px;
+    font-size: 1em;
+    margin: 10px auto;
     background-color: #f44336;
     color: white;
     border: none;
     border-radius: 5px;
+    display:block;
   }
 }
 
