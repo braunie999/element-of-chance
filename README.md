@@ -86,7 +86,7 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
 
 ### Validation of Code
 
-- No errors were found when passing through the validator site [validator results for index.html](https://validator.w3.org/nu/?showsource=yes&useragent=Validator.nu%2FLV+https%3A%2F%2Fvalidator.w3.org%2Fservices&acceptlanguage=&doc=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F)
+- No errors were found when passing through the validator site [validator results for index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F)
 
 - No errors were found when passing through the W3C CSS validator [validator results for CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
