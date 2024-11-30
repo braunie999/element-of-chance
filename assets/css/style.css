@@ -242,8 +242,6 @@ button#reset-game:hover {
   background-color: #d32f2f; /* Darker Red */
 }
 
-}
-
 /* Media query for larger devices and Laptops with a max width of 1200px */
 @media (max-width: 1200px) {
   header {
