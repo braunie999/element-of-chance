@@ -1,6 +1,6 @@
 # Element of Chance
 
-![image of site](link to image) - use an image from AmIResponsive that shows the site on multiple devices
+![Responsive Screenshot Mockup](/assets/images/readme.images/iam-responsive.png) 
 
 ## Introduction
 
@@ -19,12 +19,12 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
     - [The structure Plane](#the-structure-plane)
     - [The Surface Plane](#the-surface-plane)
       - [Design](#design)
-      - [Colour Scheme](#colour-scheme)
-    - [Typography](#typography)
-    - [Imagery](#imagery)
+        - [Colour Scheme](#colour-scheme)
+        - [Typography](#typography)
+        - [Imagery](#imagery)
   - [Features](#features)
     - [Features Included](#features-included)
-  - [Features to be Added](#features-to-be-added)
+    - [Features to be Added](#features-to-be-added)
   - [Testing](#testing)
     - [Validation of Code](#validation-of-code)
     - [Wave Webaim - accessibility testing](#wave-webaim---accessibility-testing)
@@ -79,7 +79,7 @@ Implementation:
 Acceptance Criteria:
 
 - Users should have the option to play a simpler version of the game.
-  
+
 Implementation:
 
 - Users can choose between the classic game version and a more challenging version that includes lizard and spock options.
@@ -90,7 +90,7 @@ Implementation:
 
 - I went with a very minimilistic color and design that it was easy on users to follow and stay engaged.
 
-#### Colour Scheme
+##### Colour Scheme
 
 - The color scheme is designed to be appealing while ensuring readability and accessibility. It uses a combination of vibrant and calming colors to attract users while maintaining
   focus on the content.
@@ -98,13 +98,13 @@ Implementation:
 - The colour codes were checked using a contrast checker to ensure the required contrast ratio for different elements.
   [Contrast Grid](https://contrast-grid.eightshapes.com/?version=1.1.0&background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23000000%2C%20Black%0D%0A%232196f3%0D%0A%231976c8%0D%0A%23120a41%0D%0A%2370480b%0D%0A%23ff9800%0D%0A%23d5e5ea%0D%0A%23869cad%0D%0A%23f44336%0D%0A%23d32f2f%0D%0A&es-color-form__tile-size=compact&es-color-form__show-contrast=aaa&es-color-form__show-contrast=aa&es-color-form__show-contrast=aa18&es-color-form__show-contrast=dnp)
 
-### Typography
+##### Typography
 
 - The typography focuses on clarity and legibility, utilizing web-safe fonts that are easy to read across devices.
 
-### Imagery
+##### Imagery
 
-- Images used within the site are sourced from free-to-use repositories, enhancing user engagement without compromising loading times.
+- Images used within the site are sourced from free-to-download wesite, enhancing user engagement without compromising loading times.
 
 ## Features
 
@@ -118,7 +118,7 @@ Implementation:
 3. **A Score Tracking System**: Wins, losses, and ties are tracked and displayed on the screen.
 4. **The Ability to Play Against the Computer**: The player plays against a randomly chosen move made by the computer.
 
-## Features to be Added
+### Features to be Added
 
 - User Accounts: Allow users to save their progress and favorite simulations.
 - Dynamic Graphs: Integrate real-time data visualization for results from simulations.
@@ -132,9 +132,7 @@ Implementation:
 
 - No errors were found when passing through the W3C CSS validator [validator results for CSS](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbraunie999.github.io%2Felement-of-chance%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 - JavaScript
-  - No errors were returned when passing through the validator service at JSHint.com. ![View Image of Report](/assets/images/read-me/jshint-report.png)
-
-Insert screenshots of HTML, CSS and any other code files being tested in the relevant code validator - CSS validator might not validate newer CSS syntax - be careful to read and fully understand why it is giving you an error.
+  - No errors were returned when passing through the validator service at JSHint.com. ![View Image of Report](/assets/images/readme.images/jshint-report.png)
 
 ### Wave Webaim - accessibility testing
 
