@@ -28,6 +28,8 @@ Welcome to Element of Chance, an interactive web application built with HTML, CS
   - [Testing](#testing)
     - [Validation of Code](#validation-of-code)
     - [Wave Webaim - accessibility testing](#wave-webaim---accessibility-testing)
+    - [Lighthouse](#lighthouse)
+    - [Bugs](#bugs)
     - [Manual Testing](#manual-testing)
   - [Deployment](#deployment)
   - [Credits](#credits)
@@ -141,8 +143,12 @@ Implementation:
 - User Accounts: Allow users to save their progress and favorite simulations.
 - Dynamic Graphs: Integrate real-time data visualization for results from simulations.
 - Feedback System: Enable users to rate simulations and provide suggestions for improvements.
+- Adding a funtionality button that allows users to choose between light and dark view.
 
 ## Testing
+
+- I tested the game in various browsers such as Chrome, Safari and Firefox on both mobile and laptop devices.
+- i can also concur that the results of the game is correct.
 
 ### Validation of Code
 
@@ -156,6 +162,15 @@ Implementation:
 
 - WAVE Web Accessibility
   - No errors were returned in the WAVE web accessibility, other than contrast conflict which can be seen in the report. [View Report](https://wave.webaim.org/report#/https://braunie999.github.io/element-of-chance/)
+
+### Lighthouse
+
+- There were no major errors found in the lighthouse report.
+  ![Lighthouse report](/assets/images/readme.images/lighthouse-report.png)
+
+### Bugs
+
+- There were no notables bugs found other than some contrast issues in the firefox browser when playing the game. Firefox inverted the color scheme of the game making it seem like a dark mode has been made available
 
 ### Manual Testing
 
@@ -195,7 +210,8 @@ Implementation:
 
 - W3 Schools was used as a reference point for HTML, CSS and JavaScript
 - MDN Web Docs was also used as a reference point for HTML, CSS and JavaScript
-- StackOverflow was also used as a reference point for JavaScrpt
+- Stack overflow was also used as a reference point for JavaScrpt
+- freeCodeCamp.org YouTube channel was also used to understand how Javascript works in a developing enviroment with specific focus on a Rock Paper Scissors game.[Web Development Tutorial](https://www.youtube.com/watch?v=jaVNP3nIAv0&t=3205s)
 
 ## Acknowledgements
 
