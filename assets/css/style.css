@@ -311,7 +311,7 @@ h4 {
   }
 
   button#reset-game {
-    width: 50vw;
+    width: 50%;
     padding: 12px;
     font-size: 1em;
     margin: 10px auto;
